@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.shuyuyin.ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/rb_wenzi"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="文字"
+            android:textColor="@drawable/footer_main_textcolor_selector"
+            android:drawableTop="@drawable/home_wenzi_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:textColor="@drawable/footer_main_textcolor_selector"
+            android:id="@+id/rb_yanchanghui"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="演唱会"
+            android:drawableTop="@drawable/home_yanchanghui_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton
+            android:id="@+id/rb_center"
+            android:drawablePadding="-15dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home_center_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton
+            android:textColor="@drawable/footer_main_textcolor_selector"
+            android:id="@+id/rb_message"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="消息"
+            android:drawableTop="@drawable/home_message_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton
+            android:textColor="@drawable/footer_main_textcolor_selector"
+            android:id="@+id/rb_me"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="我"
+            android:drawableTop="@drawable/home_me_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    //主页底部文字选中与未选中颜色
+    <color name="footer_textcolor_normal">#120f11</color>
+    <color name="footer_textcolor_checked">#374e6e</color>
+</resources>
