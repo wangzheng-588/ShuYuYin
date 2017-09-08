@@ -27,6 +27,9 @@
 
         <activity android:name=".ui.activity.TopicActivity"/>
         <activity android:name=".ui.activity.CommentActivity"/>
+        <activity android:name=".ui.activity.DaShangActivity"/>
+        <activity android:name=".ui.activity.DaShangListActivity"/>
+        <activity android:name=".ui.activity.PersonalHomepageActivity"/>
 
 
 

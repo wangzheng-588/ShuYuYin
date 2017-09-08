@@ -62,7 +62,7 @@
 
 
         <ImageView
-            android:id="@+id/iv_collection"
+            android:id="@+id/iv_collection1"
             android:layout_marginRight="32px"
             android:background="@mipmap/collection"
             android:layout_width="wrap_content"

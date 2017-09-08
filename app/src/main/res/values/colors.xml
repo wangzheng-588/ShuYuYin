@@ -7,4 +7,7 @@
     //主页底部文字选中与未选中颜色
     <color name="footer_textcolor_normal">#120f11</color>
     <color name="footer_textcolor_checked">#374e6e</color>
+    <color name="tab_indicator_color">#B762F5</color>
+    <color name="tablayout_title_Blue">#B762F5</color>
+    <color name="tab_text_color">#7E7E7E</color>
 </resources>

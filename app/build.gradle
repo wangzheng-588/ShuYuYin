@@ -38,15 +38,12 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.10'
     //最新版本
     implementation 'com.android.support:recyclerview-v7:26.0.2'
-
-
     //RecyclerAdapter
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
-
     //gradle
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'jp.wasabeef:glide-transformations:2.0.2'
-
     //圆形imageview
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:design:26.0.2'
 }

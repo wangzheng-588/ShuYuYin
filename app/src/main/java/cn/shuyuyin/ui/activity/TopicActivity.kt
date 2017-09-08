@@ -39,6 +39,12 @@ class TopicActivity: BaseActivity() {
             startActivity(intent)
         }
 
+        ll_wenzhang_dashang.setOnClickListener{ v ->
+            val intent = Intent()
+            intent.setClass(this,DaShangActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun init() {

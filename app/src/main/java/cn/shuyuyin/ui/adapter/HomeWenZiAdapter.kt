@@ -171,7 +171,7 @@ class HomeWenZiAdapter(private val mContext: Context) : RecyclerView.Adapter<Rec
             tvTitle =  itemView.findViewById<TextView>(R.id.tv_title)
             tvComment =  itemView.findViewById<TextView>(R.id.tv_comment)
             ivComment =  itemView.findViewById<ImageView>(R.id.iv_comment)
-            ivCollection =  itemView.findViewById<ImageView>(R.id.iv_collection)
+            ivCollection =  itemView.findViewById<ImageView>(R.id.iv_collection1)
             ivShare =  itemView.findViewById<ImageView>(R.id.iv_share)
         }
 
