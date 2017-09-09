@@ -32,7 +32,7 @@ class YanChangHuiFragment: BaseFragment() {
         mFragments.add(YanChangHuiActivityFragment())
         mFragments.add(YanChangHuiChangDiFragment())
 
-        val adapter = FragmentAdapter(fragmentManager, mTitles, mFragments)
+        val adapter = FragmentAdapter(childFragmentManager, mTitles, mFragments)
         view_pager.offscreenPageLimit = mTitles.size
         view_pager.adapter = adapter
         tab_layout.setupWithViewPager(view_pager)

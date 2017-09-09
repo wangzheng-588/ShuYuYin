@@ -31,7 +31,7 @@ class MessageFragment: BaseFragment() {
         mFragments.add(MessageHotFragment())
         mFragments.add(MessageSelectedFragment())
 
-        val adapter = FragmentAdapter(fragmentManager, mTitles, mFragments)
+        val adapter = FragmentAdapter(childFragmentManager, mTitles, mFragments)
         view_pager.offscreenPageLimit = mTitles.size
         view_pager.adapter = adapter
         tab_layout.setupWithViewPager(view_pager)

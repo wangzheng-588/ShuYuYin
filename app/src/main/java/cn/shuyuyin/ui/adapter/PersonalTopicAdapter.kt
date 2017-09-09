@@ -1,25 +1,14 @@
 package cn.shuyuyin.ui.adapter
 
 import android.content.Context
-import android.content.Intent
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-
-import com.youth.banner.Banner
-
-import java.util.ArrayList
 
 import cn.shuyuyin.R
-import cn.shuyuyin.bean.HomeMoreBean
-import cn.shuyuyin.bean.TopicBean
-import cn.shuyuyin.ui.activity.TopicActivity
-import cn.shuyuyin.ui.common.utils.GlideImageLoader
+import cn.shuyuyin.common.utils.ShareUtils
 
 
 /**
@@ -111,7 +100,19 @@ class PersonalTopicAdapter(private val mContext: Context) : RecyclerView.Adapter
 
     inner class VideoViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        val ivShare:ImageView
+
+        init {
+            ivShare = itemView.findViewById(R.id.iv_share)
+        }
+
         fun setData() {
+
+            ivShare.setOnClickListener{
+
+                ShareUtils.showShare(mContext)
+
+            }
 
         }
 
@@ -120,7 +121,20 @@ class PersonalTopicAdapter(private val mContext: Context) : RecyclerView.Adapter
     internal inner class ImageViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
+        val ivShare:ImageView
+
+        init {
+            ivShare = itemView.findViewById(R.id.iv_share)
+        }
+
+
         fun setData() {
+
+            ivShare.setOnClickListener{
+
+                ShareUtils.showShare(mContext)
+
+            }
 
         }
     }
@@ -128,13 +142,22 @@ class PersonalTopicAdapter(private val mContext: Context) : RecyclerView.Adapter
     internal inner class TextViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
+        val ivShare:ImageView
+
+        init {
+            ivShare = itemView.findViewById(R.id.iv_share)
+        }
 
 
         fun setData() {
 
+            ivShare.setOnClickListener{
+
+                ShareUtils.showShare(mContext)
+
+            }
 
         }
-
 
     }
 

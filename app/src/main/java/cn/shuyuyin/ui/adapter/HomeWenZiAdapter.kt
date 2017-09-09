@@ -19,7 +19,7 @@ import cn.shuyuyin.R
 import cn.shuyuyin.bean.HomeMoreBean
 import cn.shuyuyin.bean.TopicBean
 import cn.shuyuyin.ui.activity.TopicActivity
-import cn.shuyuyin.ui.common.utils.GlideImageLoader
+import cn.shuyuyin.common.utils.GlideImageLoader
 
 
 /**

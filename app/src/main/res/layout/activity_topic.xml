@@ -149,6 +149,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_share"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_width="wrap_content"

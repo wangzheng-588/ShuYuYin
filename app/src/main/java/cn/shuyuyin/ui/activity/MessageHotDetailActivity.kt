@@ -2,6 +2,7 @@ package cn.shuyuyin.ui.activity
 
 import android.content.Intent
 import cn.shuyuyin.R
+import cn.shuyuyin.common.utils.ShareUtils
 import cn.shuyuyin.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_message_hot_detail.*
 
@@ -32,6 +33,10 @@ class MessageHotDetailActivity:BaseActivity() {
             intent.setClass(this,DaShangActivity::class.java)
             startActivity(intent)
 
+        }
+
+        ll_share.setOnClickListener { v->
+            ShareUtils.showShare(this)
         }
 
     }

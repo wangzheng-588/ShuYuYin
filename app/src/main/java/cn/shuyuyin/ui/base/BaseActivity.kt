@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.zhy.autolayout.AutoLayoutActivity
 import android.view.View
-import cn.shuyuyin.ui.common.utils.StatusBarUtil
+import cn.shuyuyin.common.utils.StatusBarUtil
 
 
 /**

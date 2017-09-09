@@ -86,8 +86,8 @@
 
         </activity>
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
-        <meta-data android:name="Mob-AppKey" android:value="您的AppKey"/>
-        <meta-data android:name="Mob-AppSecret" android:value="您的AppSecret"/>
+        <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
+        <meta-data android:name="Mob-AppSecret" android:value="9c144a93952c59caf3a24f2c1c26aa3e"/>
 
 
 

@@ -23,7 +23,7 @@ class PersonalWenZhangFragment:BaseFragment() {
             personalWenzhangList.add(PersonalWenZhangListBean(i))
         }
 
-        recycler_view.adapter = PersonalWenZhangListAdapter(data = personalWenzhangList)
+        recycler_view.adapter = PersonalWenZhangListAdapter(context = mContext,data = personalWenzhangList)
         recycler_view.layoutManager = LinearLayoutManager(mContext)
 
     }
