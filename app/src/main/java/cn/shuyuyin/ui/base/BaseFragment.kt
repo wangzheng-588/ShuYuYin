@@ -83,7 +83,7 @@ abstract class BaseFragment: Fragment() {
 
     }
 
-    protected fun init() {}
+    open protected fun init() {}
 
     override fun onActivityCreated( savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

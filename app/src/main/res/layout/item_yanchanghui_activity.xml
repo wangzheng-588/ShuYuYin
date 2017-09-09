@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_marginTop="15px"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:layout_marginLeft="32px"
+        android:background="@mipmap/default_image"
+        android:layout_width="180px"
+        android:layout_height="300px" />
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="32px"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:text="十三月 “民谣在路上”"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="时间：2014-12-12  19：30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:text="地点：青岛市南区太平路9号"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:text="场所：青岛人民会堂"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:text="费用：180元 - 660元"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
