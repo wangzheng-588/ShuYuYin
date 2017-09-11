@@ -88,4 +88,10 @@
     </style>
 
 
+
+    <style name="customLineColor" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#56ffffff</item>
+        <item name="colorControlActivated">#78ffffff</item>
+    </style>
+
 </resources>

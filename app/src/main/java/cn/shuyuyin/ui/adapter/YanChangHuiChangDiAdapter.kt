@@ -1,5 +1,6 @@
 package cn.shuyuyin.ui.adapter
 
+import android.widget.TextView
 import cn.shuyuyin.R
 import cn.shuyuyin.bean.YanChangHuiChangDiBean
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -10,6 +11,8 @@ import com.chad.library.adapter.base.BaseViewHolder
  */
 class YanChangHuiChangDiAdapter(layoutResId:Int = R.layout.item_yanchanghui_changdi, data:List<YanChangHuiChangDiBean>):BaseQuickAdapter<YanChangHuiChangDiBean,BaseViewHolder>(layoutResId,data) {
     override fun convert(helper: BaseViewHolder?, item: YanChangHuiChangDiBean?) {
+
+        helper!!.getView<TextView>(R.id.tv_location).paint.isFakeBoldText = true
 
     }
 }

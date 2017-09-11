@@ -1,20 +1,13 @@
 package cn.shuyuyin.ui.activity
 
-import android.app.Activity
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import cn.shuyuyin.R
+import cn.shuyuyin.common.utils.PopupWindowUtil
 import cn.shuyuyin.ui.base.BaseActivity
 import cn.shuyuyin.ui.view.crop.dialog.PickPhotoDialog
 import kotlinx.android.synthetic.main.activity_edit_infomation.*
-import java.nio.file.Files.size
-import android.content.Intent
-import android.view.View
-import android.view.Window
-import cn.shuyuyin.common.dialog.SelectorGenderDialog
-import cn.shuyuyin.common.extends.toast
-import cn.shuyuyin.common.utils.Config
-import cn.shuyuyin.common.utils.PopupWindowUtil
 
 
 /**
@@ -23,7 +16,6 @@ import cn.shuyuyin.common.utils.PopupWindowUtil
 class EditInformationActivity:BaseActivity() {
 
     var pickPhotoDialog:PickPhotoDialog?= null
-    var genderDialog:SelectorGenderDialog?=null
     var popWindowUtils:PopupWindowUtil?=null
 
     override fun setLayoutView(): Int {
@@ -39,7 +31,6 @@ class EditInformationActivity:BaseActivity() {
         super.initListener()
 
         pickPhotoDialog = PickPhotoDialog(this,this)
-        genderDialog = SelectorGenderDialog(this,this)
         popWindowUtils = PopupWindowUtil(this)
 
 
@@ -78,6 +69,7 @@ class EditInformationActivity:BaseActivity() {
         })
 
 
+        ib_back.setOnClickListener { finish() }
 
 
 
@@ -92,22 +84,9 @@ class EditInformationActivity:BaseActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
 
-//
-//        if (pickPhotoDialog != null) {
-//            pickPhotoDialog!!.onActivityResult(requestCode, resultCode, data)
-//        }
-
-
-        when(resultCode){
-            Config.INFOMATION_GENDER_REQUEST_CODE ->{
-                toast(message = data!!.getStringExtra(Config.INFOMATION_GENDER))
-            }
+        if (pickPhotoDialog != null) {
+            pickPhotoDialog!!.onActivityResult(requestCode, resultCode, data)
         }
-
-
-//        if (genderDialog!=null){
-//            genderDialog!!.onActivityResult(requestCode,resultCode,data)
-//        }
 
     }
 

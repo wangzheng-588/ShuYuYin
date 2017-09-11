@@ -48,6 +48,7 @@
 
 
         <RadioButton
+            android:layout_marginTop="8px"
             android:id="@+id/rb_center"
             android:drawablePadding="-15dp"
             android:gravity="center"
