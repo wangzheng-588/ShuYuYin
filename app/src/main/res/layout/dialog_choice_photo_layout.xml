@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:clickable="true">
+        <Button
+            android:id="@+id/btn_takephoto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/blue_item_r"
+            android:text="拍照"/>
+
+        <ImageView
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_photo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/blue_item_r"
+            android:text="相册"/>
+
+
+        <ImageView
+            android:background="#646464"
+            android:layout_width="match_parent"
+            android:layout_height="20px" />
+
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/blue_item_r"
+            android:text="取消"/>
+
+    </LinearLayout>
+</RelativeLayout>

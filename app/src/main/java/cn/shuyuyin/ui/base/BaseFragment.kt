@@ -62,6 +62,7 @@ abstract class BaseFragment: Fragment() {
         val view = inflater!!.inflate(setLayoutResID(), null)
         mContext = activity
 
+        initView(view)
         return view
     }
 
@@ -83,16 +84,24 @@ abstract class BaseFragment: Fragment() {
 
     }
 
-    open protected fun init() {}
+
 
     override fun onActivityCreated( savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        initListener()
         init()
         initData()
     }
 
 
     protected abstract fun setLayoutResID(): Int
+
+    open protected fun initView(view: View) {}
+
+    open protected fun initListener(){}
+
+    open protected fun init() {}
 
     protected abstract fun initData()
 
