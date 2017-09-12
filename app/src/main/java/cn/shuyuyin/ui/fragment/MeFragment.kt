@@ -2,10 +2,7 @@ package cn.shuyuyin.ui.fragment
 
 import android.content.Intent
 import cn.shuyuyin.R
-import cn.shuyuyin.ui.activity.EditInformationActivity
-import cn.shuyuyin.ui.activity.MyFollowActivity
-import cn.shuyuyin.ui.activity.MyMessageActivity
-import cn.shuyuyin.ui.activity.MyTopicActivity
+import cn.shuyuyin.ui.activity.*
 import cn.shuyuyin.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_me.*
 
@@ -40,9 +37,24 @@ class MeFragment: BaseFragment() {
         //我关注的
         tv_my_follow.setOnClickListener { startActivity(Intent(mContext, MyFollowActivity::class.java)) }
 
+        //成为作者
+        tv_become_author.setOnClickListener { startActivity(Intent(mContext, BecomeAuthorActivity::class.java)) }
+
+        //我的歌单
+        tv_song_sheet.setOnClickListener { startActivity(Intent(mContext, MySongSheetActivity::class.java)) }
+
+        //我的积分
+        tv_my_integral.setOnClickListener {  startActivity(Intent(mContext, MyIntegralActivity::class.java))  }
+
+        //系统设置
+        tv_system_setting.setOnClickListener {  startActivity(Intent(mContext, SystemSettingActivity::class.java))  }
+
+
+
     }
 
     override fun initData() {
 
     }
 }
+

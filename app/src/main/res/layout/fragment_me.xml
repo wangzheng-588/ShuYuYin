@@ -191,6 +191,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/tv_become_author"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="成为作者"
@@ -198,6 +199,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/tv_song_sheet"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="我的歌单"
@@ -214,6 +216,7 @@
 
 
         <TextView
+            android:id="@+id/tv_my_integral"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="我的积分"
@@ -221,6 +224,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/tv_system_setting"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="系统设置"

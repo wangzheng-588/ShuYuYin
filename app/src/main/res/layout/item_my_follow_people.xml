@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_gravity="center_horizontal"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:src="@mipmap/default_image"
+        app:civ_border_width="0dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:layout_marginTop="8px"
+        android:layout_gravity="center_horizontal"
+        android:text="走钢索的人"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
