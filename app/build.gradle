@@ -57,4 +57,7 @@ dependencies {
     implementation files('libs/ShareSDK-Wechat-Core-3.0.2.jar')
     implementation files('libs/ShareSDK-Wechat-Favorite-3.0.2.jar')
     implementation files('libs/ShareSDK-Wechat-Moments-3.0.2.jar')
+
+    //nineoldandroids
+    compile 'com.nineoldandroids:library:2.4.0'
 }

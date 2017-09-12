@@ -100,6 +100,8 @@
         <activity android:name=".ui.activity.BindAccountActivity" />
         <activity android:name=".ui.activity.MyMessageActivity" />
         <activity android:name=".ui.activity.CommentListActivity" />
+        <activity android:name=".ui.activity.MyTopicActivity" />
+        <activity android:name=".ui.activity.MyFollowActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
