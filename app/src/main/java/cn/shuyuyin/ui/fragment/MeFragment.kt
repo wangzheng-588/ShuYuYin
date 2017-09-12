@@ -3,11 +3,13 @@ package cn.shuyuyin.ui.fragment
 import android.content.Intent
 import cn.shuyuyin.R
 import cn.shuyuyin.ui.activity.EditInformationActivity
+import cn.shuyuyin.ui.activity.MyMessageActivity
 import cn.shuyuyin.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_me.*
 
 /**
  * Created by wz on 17-9-7.
+ * 我--模块
  */
 
 class MeFragment: BaseFragment() {
@@ -26,6 +28,8 @@ class MeFragment: BaseFragment() {
             startActivity(intent)
 
         }
+
+        tv_my_message.setOnClickListener { startActivity(Intent(mContext, MyMessageActivity::class.java)) }
 
     }
 

@@ -93,6 +93,13 @@
         </activity>
         <activity android:name=".ui.activity.ForgetPasswordActivity" />
         <activity android:name=".ui.activity.RegActivity" />
+        <activity android:name=".ui.activity.ChangePhoneNumActivity" />
+        <activity android:name=".ui.activity.EditNewPhoneNumActivity" />
+        <activity android:name=".ui.activity.ChangePasswordActivity" />
+        <activity android:name=".ui.activity.ChangePayPasswordActivity"/>
+        <activity android:name=".ui.activity.BindAccountActivity" />
+        <activity android:name=".ui.activity.MyMessageActivity" />
+        <activity android:name=".ui.activity.CommentListActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
