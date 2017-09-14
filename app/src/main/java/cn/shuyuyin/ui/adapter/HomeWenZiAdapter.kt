@@ -10,21 +10,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-
-import com.youth.banner.Banner
-
-import java.util.ArrayList
-
 import cn.shuyuyin.R
 import cn.shuyuyin.bean.HomeMoreBean
 import cn.shuyuyin.bean.TopicBean
-import cn.shuyuyin.ui.activity.TopicActivity
 import cn.shuyuyin.common.utils.GlideImageLoader
+import cn.shuyuyin.ui.activity.TopicActivity
+import com.youth.banner.Banner
+import java.util.*
 
 
 /**
  * Created by wz on 17-7-9.
- * 商城 adapter
+ * 文字 adapter
  */
 
 class HomeWenZiAdapter(private val mContext: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

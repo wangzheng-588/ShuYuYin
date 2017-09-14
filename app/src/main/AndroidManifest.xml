@@ -113,6 +113,7 @@
         <activity android:name=".ui.activity.RadioDetailActivity" />
         <activity android:name=".ui.activity.HomeCenterActivity" />
         <activity android:name=".ui.activity.ShoppingMallActivity" />
+        <activity android:name=".ui.activity.RecommendDetailActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>

@@ -4,24 +4,25 @@ import android.support.v4.app.Fragment
 import cn.shuyuyin.R
 import cn.shuyuyin.ui.adapter.FragmentAdapter
 import cn.shuyuyin.ui.base.BaseActivity
-import cn.shuyuyin.ui.fragment.ShoppingActivityFragment
-import cn.shuyuyin.ui.fragment.ShoppingMallCategoryFragment
-import cn.shuyuyin.ui.fragment.ShoppingMallRecommendFragment
-import kotlinx.android.synthetic.main.activity_shopping_mall.*
+import cn.shuyuyin.ui.fragment.CategoryRecommendFragment
+import cn.shuyuyin.ui.fragment.RecommendActivityFragment
+import cn.shuyuyin.ui.fragment.RecommendCategoryFragment
+import kotlinx.android.synthetic.main.activity_recommend_detail.*
 
 /**
  * Created by wz on 17-9-14.
- * 商城
+ * 商城推荐模块
  */
-class ShoppingMallActivity:BaseActivity() {
+
+class RecommendDetailActivity:BaseActivity() {
+
 
 
     private val mTitles = ArrayList<String>()
     private val mFragments = ArrayList<Fragment>()
 
-
     override fun setLayoutView(): Int {
-        return R.layout.activity_shopping_mall
+        return R.layout.activity_recommend_detail
     }
 
     override fun initView() {
@@ -36,16 +37,19 @@ class ShoppingMallActivity:BaseActivity() {
         ib_back.setOnClickListener { finish() }
     }
 
+
+
     override fun init() {
+
 
         mTitles.add("推荐")
         mTitles.add("分类")
         mTitles.add("活动")
 
 
-        mFragments.add(ShoppingMallRecommendFragment())
-        mFragments.add(ShoppingMallCategoryFragment())
-        mFragments.add(ShoppingActivityFragment())
+        mFragments.add(CategoryRecommendFragment())
+        mFragments.add(RecommendCategoryFragment())
+        mFragments.add(RecommendActivityFragment())
 
         val adapter = FragmentAdapter(supportFragmentManager, mTitles, mFragments)
         view_pager.offscreenPageLimit = mTitles.size
