@@ -7,33 +7,44 @@
 
 
     <LinearLayout
+
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
         <RelativeLayout
+            android:background="@mipmap/default_image"
             android:layout_width="match_parent"
-            android:layout_height="460px">
+            android:layout_height="wrap_content">
 
 
 
+            <ImageView
+                android:id="@+id/iv_shopping_cart"
+                android:layout_marginTop="60px"
+                android:layout_marginRight="36px"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/shopping_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="58px"
+                android:layout_marginTop="146px"
                 android:layout_gravity="center_horizontal"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/civ_head"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
+                android:layout_width="142px"
+                android:layout_height="142px"
                 android:src="@mipmap/default_image"
                 app:civ_border_width="0dp"
                 app:civ_border_color="#FF000000"/>
 
             <TextView
-                android:textColor="#ffffff"
-                android:layout_marginTop="8px"
+                android:id="@+id/tv_login_logout"
+                android:textColor="#fefcfc"
+                android:layout_marginTop="28px"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/civ_head"
                 android:text="登录/注册"
@@ -41,8 +52,10 @@
                 android:layout_height="wrap_content" />
 
             <LinearLayout
-                android:layout_marginLeft="36px"
-                android:layout_marginRight="36px"
+                android:padding="32px"
+                android:layout_marginTop="88px"
+                android:layout_below="@id/tv_login_logout"
+
                 android:orientation="horizontal"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
@@ -57,28 +70,33 @@
 
 
                     <TextView
+                        android:textColor="#fefcfc"
+                        android:textSize="28px"
                         android:layout_gravity="center_horizontal"
                         android:text="0"
-                        android:textColor="#000000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
 
                     <TextView
+                        android:textSize="28px"
+                        android:layout_marginTop="14px"
                         android:text="关注"
-                        android:textColor="#000000"
+                        android:textColor="#fefcfc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
 
-                <TextView
-                    android:layout_gravity="bottom"
-                    android:text="|"
-                    android:textColor="#000000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+               <View
+                   android:layout_marginLeft="32px"
+                   android:layout_marginRight="32px"
+                   android:layout_gravity="bottom"
+                   android:background="#fdfcfc"
+                   android:layout_width="2dp"
+                   android:layout_height="32px"/>
 
 
                 <LinearLayout
@@ -89,16 +107,19 @@
 
 
                     <TextView
+                        android:textColor="#fefcfc"
+                        android:textSize="28px"
                         android:layout_gravity="center_horizontal"
                         android:text="0"
-                        android:textColor="#000000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
 
                     <TextView
+                        android:textColor="#fefcfc"
+                        android:textSize="28px"
                         android:text="粉丝"
-                        android:textColor="#000000"
+                        android:layout_marginTop="14px"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
@@ -111,9 +132,11 @@
 
 
                 <TextView
+                    android:drawableLeft="@mipmap/edit"
+                    android:textSize="28px"
                     android:id="@+id/tv_edit_information"
                     android:layout_gravity="bottom"
-                    android:textColor="#000000"
+                    android:textColor="#fdfcfc"
                     android:text="编辑资料"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -129,26 +152,39 @@
 
 
         <TextView
+            android:layout_marginTop="32px"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="我的订单"
+            android:textColor="#2c2d2d"
+            android:textSize="30px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
 
         <LinearLayout
+            android:layout_marginTop="32px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
             <TextView
+
+                android:drawableTop="@mipmap/payment"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
+                android:drawablePadding="14px"
+                android:textSize="28px"
+                android:textColor="#2c2d2d"
                 android:text="待付款"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:drawablePadding="14px"
+                android:textSize="28px"
+                android:textColor="#2c2d2d"
+                android:drawableTop="@mipmap/send_the_goods"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
                 android:text="待发货"
@@ -156,13 +192,21 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:drawablePadding="14px"
+                android:textSize="28px"
+                android:textColor="#2c2d2d"
                 android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/wait_for_the_goods"
                 android:layout_weight="1"
                 android:text="待收货"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:drawablePadding="14px"
+                android:textSize="28px"
+                android:textColor="#2c2d2d"
+                android:drawableTop="@mipmap/after_sale"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
                 android:text="售后"
@@ -175,6 +219,13 @@
 
 
         <TextView
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:layout_marginTop="60px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_message"
+            android:drawableRight="@mipmap/enter"
             android:id="@+id/tv_my_message"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -182,7 +233,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
+            android:drawableRight="@mipmap/enter"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
             android:id="@+id/tv_my_topic"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -190,7 +253,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
+            android:drawableRight="@mipmap/enter"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
             android:id="@+id/tv_become_author"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -198,7 +274,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:drawableRight="@mipmap/enter"
             android:id="@+id/tv_song_sheet"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -206,7 +296,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
+            android:drawableRight="@mipmap/enter"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
             android:id="@+id/tv_my_follow"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -215,7 +318,20 @@
             android:layout_height="wrap_content" />
 
 
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
         <TextView
+            android:drawableRight="@mipmap/enter"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
             android:id="@+id/tv_my_integral"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -223,11 +339,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/system_setting"
+            android:drawableRight="@mipmap/enter"
             android:id="@+id/tv_system_setting"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
             android:text="系统设置"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@mipmap/horizontal_line"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

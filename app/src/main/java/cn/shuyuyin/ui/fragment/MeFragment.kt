@@ -49,6 +49,7 @@ class MeFragment: BaseFragment() {
         //系统设置
         tv_system_setting.setOnClickListener {  startActivity(Intent(mContext, SystemSettingActivity::class.java))  }
 
+        iv_shopping_cart.setOnClickListener { startActivity(Intent(mContext, ShoppingMallActivity::class.java)) }
 
 
     }

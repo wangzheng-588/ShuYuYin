@@ -4,49 +4,45 @@ import android.support.v4.app.Fragment
 import cn.shuyuyin.R
 import cn.shuyuyin.ui.adapter.FragmentAdapter
 import cn.shuyuyin.ui.base.BaseActivity
-import cn.shuyuyin.ui.fragment.PersonalMusicFragment
-import cn.shuyuyin.ui.fragment.PersonalTopicFragment
-import cn.shuyuyin.ui.fragment.PersonalWenZhangFragment
-import kotlinx.android.synthetic.main.activity_personal_homepager.*
-
-
+import cn.shuyuyin.ui.fragment.ArtistsFragment
+import cn.shuyuyin.ui.fragment.MusicListenFragment
+import cn.shuyuyin.ui.fragment.RadioFragment
+import kotlinx.android.synthetic.main.activity_home_center.*
 
 /**
- * Created by wz on 17-9-8.
+ * Created by wz on 17-9-14.
+ * 首页中心模块 -- 电台
  */
-class PersonalHomepageActivity :BaseActivity() {
+class HomeCenterActivity:BaseActivity() {
+
 
     private val mTitles = ArrayList<String>()
     private val mFragments = ArrayList<Fragment>()
 
-
     override fun setLayoutView(): Int {
-        return R.layout.activity_personal_homepager
+        return R.layout.activity_home_center
     }
 
     override fun initListener() {
         super.initListener()
-
-        ib_back.setOnClickListener {finish()}
+        ib_back.setOnClickListener { finish() }
     }
-
 
     override fun init() {
 
-        mTitles.add("文章")
-        mTitles.add("话题")
-        mTitles.add("音乐")
+        mTitles.add("电台")
+        mTitles.add("乐听")
+        mTitles.add("艺人")
 
 
-        mFragments.add(PersonalWenZhangFragment())
-        mFragments.add(PersonalTopicFragment())
-        mFragments.add(PersonalMusicFragment())
+        mFragments.add(RadioFragment())
+        mFragments.add(MusicListenFragment())
+        mFragments.add(ArtistsFragment())
 
         val adapter = FragmentAdapter(supportFragmentManager, mTitles, mFragments)
         view_pager.offscreenPageLimit = mTitles.size
         view_pager.adapter = adapter
         tab_layout.setupWithViewPager(view_pager)
-
 
     }
 }

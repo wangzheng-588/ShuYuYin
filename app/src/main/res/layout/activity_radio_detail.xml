@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="96px">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:background="@mipmap/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="40px"
+            android:layout_centerInParent="true"
+            android:text="电台"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:layout_marginTop="72px"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/default_image"
+                android:layout_width="500px"
+                android:layout_height="500px" />
+
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_marginTop="68px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+
+                    android:layout_marginRight="92px"
+                    android:background="@mipmap/peronal_topic_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:layout_marginRight="92px"
+                    android:background="@mipmap/wenzhang_dashang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:layout_marginRight="92px"
+                    android:background="@mipmap/personal_topic_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:background="@mipmap/personal_topic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+
+            <WebView
+                android:layout_marginTop="52px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="80px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:background="#515151"
+                    android:layout_width="2dp"
+                    android:layout_height="30px"/>
+
+                <TextView
+                    android:textColor="#515151"
+                    android:layout_marginLeft="18px"
+                    android:textSize="30px"
+                    android:text="评论"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14px"
+                    android:textSize="28px"
+                    android:text="114"
+                    android:textColor="#cdcdcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/layout_play_bottom"/>
+
+
+
+</LinearLayout>

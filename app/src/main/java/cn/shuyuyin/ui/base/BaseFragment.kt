@@ -61,8 +61,6 @@ abstract class BaseFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?,container: ViewGroup?,  savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(setLayoutResID(), null)
         mContext = activity
-
-        initView(view)
         return view
     }
 
@@ -79,6 +77,8 @@ abstract class BaseFragment: Fragment() {
                 isFragmentVisible = true
             }
         }
+
+        initView(view)
         super.onViewCreated(if (isReuseView) rootView else view, savedInstanceState)
 
 
@@ -97,7 +97,7 @@ abstract class BaseFragment: Fragment() {
 
     protected abstract fun setLayoutResID(): Int
 
-    open protected fun initView(view: View) {}
+    open protected fun initView(view: View?) {}
 
     open protected fun initListener(){}
 

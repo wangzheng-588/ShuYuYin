@@ -23,4 +23,5 @@
     <dimen name="ucrop_size_wrapper_rotate_button">50dp</dimen>
     <dimen name="ucrop_height_crop_aspect_ratio_text">40dp</dimen>
     <dimen name="dialog_padding">25dp</dimen>
+    <dimen name="text_16_sp">16sp</dimen>
 </resources>

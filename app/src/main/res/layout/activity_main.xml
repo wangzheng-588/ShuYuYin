@@ -54,7 +54,7 @@
             android:gravity="center"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/home_center_selector"
+            android:drawableTop="@mipmap/home_center_normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

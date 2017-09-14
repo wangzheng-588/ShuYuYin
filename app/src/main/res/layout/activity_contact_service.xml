@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:textSize="40px"
+            android:textSize="36px"
             android:layout_centerInParent="true"
             android:text="联系客服"
             android:layout_width="wrap_content"
@@ -30,6 +30,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:layout_marginTop="80px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:layout_width="match_parent"
@@ -37,13 +38,23 @@
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="客服微信："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="w114546"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:background="@mipmap/enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -51,8 +62,9 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -65,25 +77,37 @@
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="客服QQ："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 
         <TextView
+
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="w114546"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
+        <ImageView
+            android:background="@mipmap/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <LinearLayout
         android:layout_marginLeft="36px"
@@ -93,25 +117,36 @@
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="客服联系电话："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="121214546"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
+        <ImageView
+            android:background="@mipmap/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <LinearLayout
         android:layout_marginLeft="36px"
@@ -121,24 +156,34 @@
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="工作日："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 
         <TextView
+            android:textColor="#515151"
+            android:textSize="30px"
             android:text="10：00-18：30"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
 
+        <ImageView
+            android:background="@mipmap/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
 </LinearLayout>

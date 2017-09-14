@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32px"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="648px"
+        android:layout_height="400px"
+
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/default_image" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一期"
+            android:textColor="#fefdfd"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:layout_marginTop="8px"
+            android:layout_marginBottom="8px"
+            android:textColor="#fefdfd"
+            android:textSize="32px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="青城山下白素贞" />
+
+        <TextView
+            android:textColor="#fefdfd"
+            android:textSize="36px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好妹妹" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

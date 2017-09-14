@@ -5,10 +5,34 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:background="@mipmap/default_image"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="380px" />
+        android:layout_height="380px">
+
+
+
+        <ImageView
+            android:background="@mipmap/default_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:padding="8px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14px"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:textColor="#ffffff"
+            android:text="生活|用年轻去承认态度"
+            android:background="#96031216"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
 
 
     <LinearLayout
@@ -26,7 +50,7 @@
             android:layout_weight="1"
             android:maxLines="2"
             android:ellipsize="end"
-            android:layout_marginRight="80px"
+            android:layout_marginRight="100px"
             android:text="文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情文章详情"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />

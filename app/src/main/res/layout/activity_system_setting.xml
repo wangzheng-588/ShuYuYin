@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <RelativeLayout
-        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
-        android:layout_height="96px">
+        android:layout_height="96px"
+        android:layout_marginTop="25dp">
 
         <ImageButton
             android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="36px"
-            android:background="@mipmap/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:background="@mipmap/back" />
 
         <TextView
             android:id="@+id/tv_title"
-            android:textSize="40px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="系统设置"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="36px" />
 
 
     </RelativeLayout>
@@ -33,35 +32,110 @@
 
     <TextView
         android:id="@+id/tv_help_center"
-        android:layout_marginRight="36px"
-        android:layout_marginLeft="36px"
-        android:text="帮助中心"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="78px"
+        android:drawableLeft="@mipmap/help_center"
+        android:drawablePadding="36px"
+        android:drawableRight="@mipmap/enter"
+        android:gravity="center_vertical"
+        android:text="帮助中心"
+        android:textColor="#515151"
+        android:textSize="32px" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28px"
+        android:background="@mipmap/horizontal_line" />
 
     <TextView
         android:id="@+id/tv_contact_service"
-        android:layout_marginRight="36px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="32px"
+        android:drawableLeft="@mipmap/contact_service"
+        android:drawablePadding="36px"
+        android:drawableRight="@mipmap/enter"
+        android:gravity="center_vertical"
         android:text="联系客服"
+        android:textColor="#515151"
+        android:textSize="32px" />
+
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28px"
+        android:background="@mipmap/horizontal_line" />
+
 
     <TextView
+        android:layout_marginTop="32px"
+        android:textColor="#515151"
+        android:textSize="32px"
+        android:gravity="center_vertical"
+        android:drawablePadding="36px"
+        android:drawableRight="@mipmap/enter"
         android:id="@+id/tv_about_me"
-        android:layout_marginRight="36px"
-        android:layout_marginLeft="36px"
-        android:text="关于我们"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:drawableLeft="@mipmap/about_me"
+        android:text="关于我们" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28px"
+        android:background="@mipmap/horizontal_line" />
 
     <TextView
+        android:layout_marginTop="32px"
+        android:textColor="#515151"
+        android:textSize="32px"
+        android:gravity="center_vertical"
+        android:drawablePadding="36px"
+        android:drawableRight="@mipmap/enter"
         android:id="@+id/tv_clear_cache"
-        android:layout_marginRight="36px"
-        android:layout_marginLeft="36px"
-        android:text="清理缓存"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:drawableLeft="@mipmap/clear_cache"
+        android:text="清理缓存" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28px"
+        android:background="@mipmap/horizontal_line" />
+
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <Button
+        android:layout_marginBottom="32px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:background="@drawable/button_gray_rec_arc_bg"
+        android:id="@+id/btn_logout"
+        android:text="退出登录"
+        android:textColor="#fdfafa"
+        android:textSize="30px"
+        android:layout_width="match_parent"
+        android:layout_height="90px" />
 
 
 </LinearLayout>
