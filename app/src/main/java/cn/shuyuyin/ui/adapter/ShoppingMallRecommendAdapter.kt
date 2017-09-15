@@ -196,7 +196,9 @@ class ShoppingMallRecommendAdapter(private val mContext: Context) : RecyclerView
 
 
             this.itemView.setOnClickListener {
-                mContext.startActivity(Intent(mContext, RecommendDetailActivity::class.java))
+                val intent = Intent(mContext, RecommendDetailActivity::class.java)
+                intent.putExtra("type",0)
+                mContext.startActivity(intent)
             }
 
         }

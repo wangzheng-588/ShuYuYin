@@ -41,6 +41,7 @@ class RecommendDetailActivity:BaseActivity() {
 
     override fun init() {
 
+        val type = intent.getIntExtra("type",0)
 
         mTitles.add("推荐")
         mTitles.add("分类")
@@ -55,6 +56,18 @@ class RecommendDetailActivity:BaseActivity() {
         view_pager.offscreenPageLimit = mTitles.size
         view_pager.adapter = adapter
         tab_layout.setupWithViewPager(view_pager)
+
+        when (type){
+            0->{
+                view_pager.currentItem = 0
+            }
+            1->{
+                view_pager.currentItem = 1
+            }
+            2->{
+
+            }
+        }
 
     }
 }

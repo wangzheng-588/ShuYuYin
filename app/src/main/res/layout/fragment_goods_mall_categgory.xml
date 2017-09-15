@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RadioGroup
+        android:layout_marginTop="64px"
+        android:orientation="horizontal"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="推荐"
+            android:textSize="28px"
+            android:textColor="#474747"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="最新"
+            android:textSize="28px"
+            android:textColor="#474747"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="销量"
+            android:textSize="28px"
+            android:textColor="#474747"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="价格"
+            android:textSize="28px"
+            android:textColor="#474747"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="28px"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

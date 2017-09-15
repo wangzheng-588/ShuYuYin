@@ -12,7 +12,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import cn.shuyuyin.R
 import cn.shuyuyin.common.utils.GlideImageLoader
-import cn.shuyuyin.ui.activity.RecommendDetailActivity
+import cn.shuyuyin.ui.activity.GoodsDetailActivity
 import cn.shuyuyin.ui.activity.TopicActivity
 import com.youth.banner.Banner
 import java.util.*
@@ -172,7 +172,7 @@ class CategoryDetailAdapter(private val mContext: Context) : RecyclerView.Adapte
 
 
             this.itemView.setOnClickListener {
-                mContext.startActivity(Intent(mContext, RecommendDetailActivity::class.java))
+                mContext.startActivity(Intent(mContext, GoodsDetailActivity::class.java))
             }
 
         }
@@ -184,7 +184,7 @@ class CategoryDetailAdapter(private val mContext: Context) : RecyclerView.Adapte
 
 
         /**
-         * 六种类型
+         * 两种类型
          */
         /**
          * 横幅广告
