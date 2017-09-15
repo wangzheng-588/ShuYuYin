@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="96px">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="36px"
+            android:background="@mipmap/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginLeft="36px"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:drawablePadding="14px"
+                android:layout_marginLeft="36px"
+                android:background="@null"
+                android:drawableLeft="@mipmap/search"
+                android:id="@+id/tv_title"
+                android:textSize="40px"
+                android:textColor="#a8a8a8"
+                android:layout_centerInParent="true"
+                android:hint="搜索"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginTop="10px"
+                android:background="@mipmap/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="36px"
+        android:text="热门搜索"
+        android:textSize="30px"
+        android:textColor="#a8a8a8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <cn.lankton.flowlayout.FlowLayout
+        android:layout_marginTop="64px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_width="match_parent"
+        android:id="@+id/flow_layout"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

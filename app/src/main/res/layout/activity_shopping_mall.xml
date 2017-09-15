@@ -31,7 +31,7 @@
 
         <ImageButton
             android:layout_toLeftOf="@id/ib_cart"
-            android:id="@+id/ib_collection1"
+            android:id="@+id/ib_search"
             android:layout_marginRight="36px"
             android:layout_centerVertical="true"
             android:background="@mipmap/search"

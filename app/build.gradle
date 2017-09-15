@@ -60,4 +60,7 @@ dependencies {
 
     //nineoldandroids
     compile 'com.nineoldandroids:library:2.4.0'
+
+
+    compile 'cn.lankton:flowlayout:3.1.0'
 }

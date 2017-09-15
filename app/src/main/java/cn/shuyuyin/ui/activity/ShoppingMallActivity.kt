@@ -1,5 +1,6 @@
 package cn.shuyuyin.ui.activity
 
+import android.content.Intent
 import android.support.v4.app.Fragment
 import cn.shuyuyin.R
 import cn.shuyuyin.ui.adapter.FragmentAdapter
@@ -34,6 +35,8 @@ class ShoppingMallActivity:BaseActivity() {
         super.initListener()
 
         ib_back.setOnClickListener { finish() }
+
+        ib_search.setOnClickListener { startActivity(Intent(this,MallSearchActivity::class.java)) }
     }
 
     override fun init() {

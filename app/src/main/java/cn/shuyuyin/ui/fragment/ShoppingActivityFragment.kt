@@ -23,7 +23,7 @@ class ShoppingActivityFragment:BaseFragment() {
             list.add(ShoppingMallActivityBean(i))
         }
 
-        recycler_view_activity.adapter = ShoppingMallActivityAdapter(data = list)
+        recycler_view_activity.adapter = ShoppingMallActivityAdapter(context = mContext,data = list)
         recycler_view_activity.layoutManager = LinearLayoutManager(mContext)
     }
 }

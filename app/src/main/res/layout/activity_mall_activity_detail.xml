@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="96px">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:background="@mipmap/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageButton
+            android:id="@+id/ib_share"
+            android:layout_marginRight="36px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="440px"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_width="match_parent"
+        android:layout_height="90px">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:gravity="center"
+                android:textSize="30px"
+                android:textColor="#474747"
+                android:drawablePadding="14px"
+                android:drawableLeft="@mipmap/collection1"
+                android:text="123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:background="@mipmap/vertical_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="30px"
+            android:textColor="#474747"
+            android:drawablePadding="14px"
+            android:text="商城"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

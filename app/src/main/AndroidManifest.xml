@@ -52,6 +52,7 @@
         <activity android:name=".ui.activity.GuideActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".ui.activity.AddAddressActivity"/>
+        <activity android:name=".ui.activity.GoodsSearchResultActivity"/>
 
         <meta-data android:name="design_width" android:value="720">
         </meta-data>
@@ -119,7 +120,8 @@
         <activity android:name=".ui.activity.ConfirmOrderActivity" />
         <activity android:name=".ui.activity.SwitchAddressActivity" />
         <activity android:name=".ui.activity.SubmitOrderActivity" />
-        <activity android:name=".ui.activity.CatetoryGoodsActivity" />
+        <activity android:name=".ui.activity.MallActivityDetailActivity" />
+        <activity android:name=".ui.activity.MallSearchActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
