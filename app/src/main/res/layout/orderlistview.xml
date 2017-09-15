@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_marginTop="32px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单编号:"
+                android:textColor="#474747"
+                android:textSize="26px" />
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/enter"
+                android:id="@+id/tv_order_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="125441215"
+                android:textColor="#474747"
+                android:textSize="26px" />
+
+        </LinearLayout>
+
+
+
+        <ListView
+            android:layout_marginTop="10px"
+            android:id="@+id/ll_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="8px"
+            android:scrollbars="none" >
+        </ListView>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            >
+
+            <TextView
+                android:id="@+id/tv_similar_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相似商品"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_marginLeft="48px"
+                android:background="#474747"
+                android:textColor="#fefafa"
+                android:id="@+id/tv_pay"
+                android:layout_width="122px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="付款"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="42px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        
+    </LinearLayout>
+</RelativeLayout>

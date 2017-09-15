@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/tv_return_reason"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+            android:layout_marginTop="20px"
+        android:hint="退货/退款原因"
+        android:textSize="28px"
+        android:textColor="#474747"
+        android:drawableRight="@mipmap/enter"
+        android:padding="8px"
+        android:background="@drawable/gray_rec_arc_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70px" />
+
+
+
+    <TextView
+        android:gravity="left"
+        android:hint="退货/退款原因"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="32px"
+        android:minHeight="210px"
+        android:textSize="28px"
+        android:textColor="#474747"
+        android:padding="8px"
+        android:background="@drawable/gray_rec_arc_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:textColor="#fefafa"
+        android:textSize="28px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="32px"
+        android:gravity="center"
+        android:text="确认退货"
+        android:background="#474747"
+        android:layout_width="match_parent"
+        android:layout_height="70px" />
+
+</LinearLayout>

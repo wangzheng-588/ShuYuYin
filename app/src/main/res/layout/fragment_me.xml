@@ -152,6 +152,7 @@
 
 
         <TextView
+            android:id="@+id/tv_my_order"
             android:layout_marginTop="32px"
             android:layout_marginLeft="36px"
             android:layout_marginRight="36px"
@@ -169,7 +170,7 @@
 
 
             <TextView
-
+                android:id="@+id/tv_payment"
                 android:drawableTop="@mipmap/payment"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
@@ -181,6 +182,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/tv_send_goods"
                 android:drawablePadding="14px"
                 android:textSize="28px"
                 android:textColor="#2c2d2d"
@@ -192,6 +194,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/tv_wait_goods"
                 android:drawablePadding="14px"
                 android:textSize="28px"
                 android:textColor="#2c2d2d"
@@ -203,6 +206,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/tv_after_sale"
                 android:drawablePadding="14px"
                 android:textSize="28px"
                 android:textColor="#2c2d2d"

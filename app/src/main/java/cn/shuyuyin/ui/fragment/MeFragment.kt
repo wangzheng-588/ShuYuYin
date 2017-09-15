@@ -49,9 +49,45 @@ class MeFragment: BaseFragment() {
         //系统设置
         tv_system_setting.setOnClickListener {  startActivity(Intent(mContext, SystemSettingActivity::class.java))  }
 
+        //商城
         iv_shopping_cart.setOnClickListener { startActivity(Intent(mContext, ShoppingMallActivity::class.java)) }
 
+        //我的订单
+        tv_my_order.setOnClickListener {
+            val intent = Intent(mContext,MyOrderActivity::class.java)
+            intent.putExtra("type",0)
+            startActivity(intent)
+        }
 
+        //待付款
+        tv_payment.setOnClickListener {
+            val intent = Intent(mContext,MyOrderActivity::class.java)
+            intent.putExtra("type",1)
+            startActivity(intent)
+        }
+
+
+        //待发货
+        tv_send_goods.setOnClickListener {
+            val intent = Intent(mContext,MyOrderActivity::class.java)
+            intent.putExtra("type",2)
+            startActivity(intent)
+        }
+
+
+        //待收货
+        tv_wait_goods.setOnClickListener {
+            val intent = Intent(mContext,MyOrderActivity::class.java)
+            intent.putExtra("type",3)
+            startActivity(intent)
+        }
+
+        //售后
+        tv_after_sale.setOnClickListener {
+            val intent = Intent(mContext,MyOrderActivity::class.java)
+            intent.putExtra("type",4)
+            startActivity(intent)
+        }
     }
 
     override fun initData() {

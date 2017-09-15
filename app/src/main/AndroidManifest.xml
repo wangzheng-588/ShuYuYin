@@ -122,6 +122,7 @@
         <activity android:name=".ui.activity.SubmitOrderActivity" />
         <activity android:name=".ui.activity.MallActivityDetailActivity" />
         <activity android:name=".ui.activity.MallSearchActivity" />
+        <activity android:name=".ui.activity.MyOrderActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>

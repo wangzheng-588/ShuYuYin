@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item_neworder"
+    >
+
+    <ImageView
+        android:id="@+id/iv_orderdetail_icon"
+        android:layout_width="134px"
+        android:layout_height="134px"
+        android:scaleType="center"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/default_image" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="32px"
+        android:layout_toRightOf="@id/iv_orderdetail_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:textColor="#474747"
+            android:text="天牴鞋"
+            android:textSize="30px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+
+        <LinearLayout
+            android:layout_marginTop="10px"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_weight="1"
+                android:text="899.00"
+
+                android:textColor="#474747"
+                android:textSize="30px"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_order_buy_num"
+                android:text="X1"
+
+                android:textColor="#474747"
+                android:textSize="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_freight"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="运费:78781元"
+
+                android:textColor="#474747"
+                android:textSize="30px"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_below="@id/iv_orderdetail_icon"
+        android:background="@mipmap/horizontal_line"
+        android:layout_marginTop="15px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
