@@ -6,6 +6,8 @@ package cn.shuyuyin.ui
 
 interface BaseView {
 
-    fun success(result: String)
-    fun fail(errorMessage: String)
+    fun showLoading()
+    fun showError(msg: String)
+    fun dismissLoading()
+
 }

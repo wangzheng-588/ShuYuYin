@@ -120,7 +120,7 @@ class HomeWenZiAdapter(private val mContext: Context) : RecyclerView.Adapter<Rec
                     }.start()
             //
 
-            this.banner.setOnBannerListener { v->
+            this.banner.setOnBannerListener {
 //                Toast.makeText(mContext,"日",Toast.LENGTH_SHORT).show()
                 val intent = Intent()
                 intent.setClass(mContext,TopicActivity::class.java)
@@ -177,7 +177,7 @@ class HomeWenZiAdapter(private val mContext: Context) : RecyclerView.Adapter<Rec
                 homeMoreList.add(HomeMoreBean(R.mipmap.default_image))
             }
 
-            this.itemView.setOnClickListener { view ->
+            this.itemView.setOnClickListener {
                 Toast.makeText(mContext,"jfdsfa",Toast.LENGTH_SHORT).show()
             }
 

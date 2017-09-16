@@ -3,9 +3,7 @@ package cn.shuyuyin.ui.activity
 import android.support.v7.widget.LinearLayoutManager
 import cn.shuyuyin.R
 import cn.shuyuyin.bean.CommentBean
-import cn.shuyuyin.bean.MoreCommentBean
 import cn.shuyuyin.ui.adapter.CommentAdapter
-import cn.shuyuyin.ui.adapter.MoreCommentAdapter
 import cn.shuyuyin.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_more_comment.*
 
@@ -21,7 +19,7 @@ class MoreCommentActivity:BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v->finish() }
+        ib_back.setOnClickListener { finish() }
     }
 
     override fun init() {

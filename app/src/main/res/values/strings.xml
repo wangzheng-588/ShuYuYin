@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShuYuYin</string>
+    <string name="empty_data">无数据</string>
 </resources>

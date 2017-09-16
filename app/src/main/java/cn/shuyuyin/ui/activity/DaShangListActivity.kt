@@ -28,7 +28,7 @@ class DaShangListActivity:BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v-> finish()}
+        ib_back.setOnClickListener { finish()}
 
     }
 

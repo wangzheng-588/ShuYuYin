@@ -28,11 +28,11 @@ class DaShangActivity:BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v->
+        ib_back.setOnClickListener {
             finish()
         }
 
-        iv_dashang_list_enter.setOnClickListener{ v->
+        iv_dashang_list_enter.setOnClickListener{
 
             val intent = Intent()
             intent.setClass(this,DaShangListActivity::class.java)

@@ -28,14 +28,14 @@ class AftersaleAdapter(val context: Context,val strings: ArrayList<String>):Base
         return i.toLong()
     }
 
-    override fun getView(i: Int, view: View?, viewGroup: ViewGroup): View {
-        var view = view
+    override fun getView(i: Int, convertView: View?, viewGroup: ViewGroup): View {
+       var view = convertView
         val viewHolder: ViewHolder
         if (view == null) {
             view = View.inflate(context, R.layout.item_return_reason, null)
 
             viewHolder = ViewHolder(view)
-            view!!.setTag(viewHolder)
+            view!!.tag = viewHolder
         } else {
             viewHolder = view.getTag() as ViewHolder
         }

@@ -27,20 +27,20 @@ class TopicActivity: BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v->
+        ib_back.setOnClickListener {
 
             finish()
 
         }
 
-        ll_comment.setOnClickListener{ v->
+        ll_comment.setOnClickListener{
 
             val intent = Intent()
             intent.setClass(this,CommentActivity::class.java)
             startActivity(intent)
         }
 
-        ll_wenzhang_dashang.setOnClickListener{ v ->
+        ll_wenzhang_dashang.setOnClickListener{
             val intent = Intent()
             intent.setClass(this,DaShangActivity::class.java)
             startActivity(intent)

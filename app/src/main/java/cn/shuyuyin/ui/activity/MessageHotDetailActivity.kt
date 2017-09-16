@@ -18,16 +18,16 @@ class MessageHotDetailActivity:BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v->finish() }
+        ib_back.setOnClickListener { finish() }
 
-        tv_more_comment.setOnClickListener { v->
+        tv_more_comment.setOnClickListener {
             val intent = Intent()
             intent.setClass(this,MoreCommentActivity::class.java)
             startActivity(intent)
 
         }
 
-        ll_message_hot_dashang.setOnClickListener { v->
+        ll_message_hot_dashang.setOnClickListener {
 
             val intent = Intent()
             intent.setClass(this,DaShangActivity::class.java)
@@ -35,7 +35,7 @@ class MessageHotDetailActivity:BaseActivity() {
 
         }
 
-        ll_share.setOnClickListener { v->
+        ll_share.setOnClickListener {
             ShareUtils.showShare(this)
         }
 

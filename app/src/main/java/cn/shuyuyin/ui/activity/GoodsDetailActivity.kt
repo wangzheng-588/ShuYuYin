@@ -42,14 +42,11 @@ class GoodsDetailActivity:BaseActivity() {
 
 
     //底部弹出的popWindow
-    fun showGenderBottomPopWindow(window: Window): PopupWindow {
-        var mPopupWindow: PopupWindow? = null
+    private fun showGenderBottomPopWindow(window: Window): PopupWindow {
         val popupWindowView = View.inflate(this, R.layout.popupwindow_goods_parameter, null)
 
-
-
         //        View popupWindowView = View.inflate(mContext, R.layout.case_sharing_pop, null);
-        mPopupWindow = PopupWindow(popupWindowView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
+        val mPopupWindow = PopupWindow(popupWindowView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
         //在PopupWindow里面就加上下面代码，让键盘弹出时，不会挡住pop窗口。
         mPopupWindow.inputMethodMode = PopupWindow.INPUT_METHOD_NEEDED
         mPopupWindow.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
@@ -68,13 +65,13 @@ class GoodsDetailActivity:BaseActivity() {
 
 
         ivCancel.setOnClickListener {
-          mPopupWindow!!.dismiss()
+          mPopupWindow.dismiss()
         }
 
 
         mPopupWindow.showAtLocation(popupWindowView, Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 0)
         backgroundAlpha(0.5f, window)
-        return mPopupWindow!!
+        return mPopupWindow
     }
 
 

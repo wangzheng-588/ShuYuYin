@@ -22,7 +22,7 @@ class YanChangHuiChangDiDetailActivity :BaseActivity() {
     override fun initListener() {
         super.initListener()
 
-        ib_back.setOnClickListener { v->
+        ib_back.setOnClickListener {
             finish()
         }
 

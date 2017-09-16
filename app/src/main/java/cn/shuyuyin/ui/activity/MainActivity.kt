@@ -2,7 +2,6 @@ package cn.shuyuyin.ui.activity
 
 import android.content.Intent
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import cn.shuyuyin.R
@@ -28,9 +27,6 @@ class MainActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-
-        Log.e("TAg", "J:" + currntPosition)
-
         changeRBState(currntPosition)
 
     }

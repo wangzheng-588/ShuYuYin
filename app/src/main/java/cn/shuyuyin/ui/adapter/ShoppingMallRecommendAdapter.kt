@@ -148,7 +148,7 @@ class ShoppingMallRecommendAdapter(private val mContext: Context) : RecyclerView
                     }.start()
             //
 
-            this.banner.setOnBannerListener { v->
+            this.banner.setOnBannerListener {
 //                Toast.makeText(mContext,"日",Toast.LENGTH_SHORT).show()
                 val intent = Intent()
                 intent.setClass(mContext, TopicActivity::class.java)

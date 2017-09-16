@@ -106,7 +106,7 @@ class MessageHotAdapter(private val mContext: Context) : RecyclerView.Adapter<Re
         fun setData() {
 
 
-            itemView.setOnClickListener { v->
+            itemView.setOnClickListener {
 
                 val intent = Intent()
                 intent.setClass(mContext, MessageHotDetailActivity::class.java)

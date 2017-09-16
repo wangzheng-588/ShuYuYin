@@ -8,12 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import cn.shuyuyin.ui.BaseView
 
 
 /**
  * Created by wz on 17-9-7.
+ * fragment 基类，实现baseview接口
  */
-abstract class BaseFragment: Fragment() {
+abstract class BaseFragment: Fragment(),BaseView {
 
 
     protected lateinit var mContext: Context
@@ -59,8 +61,7 @@ abstract class BaseFragment: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater?,container: ViewGroup?,  savedInstanceState: Bundle?): View? {
-        val view = inflater!!.inflate(setLayoutResID(), null)
-        mContext = activity
+        val view = inflater!!.inflate(setLayoutResID(),container ,false)
         return view
     }
 
@@ -88,6 +89,8 @@ abstract class BaseFragment: Fragment() {
 
     override fun onActivityCreated( savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        mContext = activity
 
         initListener()
         init()
@@ -140,6 +143,21 @@ abstract class BaseFragment: Fragment() {
         view.layoutParams = layoutParam
         view.invalidate()
     }
+
+
+    override fun showLoading() {
+
+    }
+
+    override fun dismissLoading() {
+
+    }
+
+    override fun showError(msg: String) {
+
+    }
+
+
 
 }
 
