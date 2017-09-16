@@ -22,7 +22,7 @@
 
 
 
-    <TextView
+    <EditText
         android:gravity="left"
         android:hint="退货/退款原因"
         android:layout_marginLeft="36px"

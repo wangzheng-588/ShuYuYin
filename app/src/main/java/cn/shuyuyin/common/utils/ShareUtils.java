@@ -30,7 +30,7 @@ public class ShareUtils {
         // comment是我对这条分享的评论，仅在人人网和QQ空间使用
         oks.setComment("我是测试评论文本");
         // site是分享此内容的网站名称，仅在QQ空间使用
-        oks.setSite("书与音");
+        oks.setSite("没有吧");
         // siteUrl是分享此内容的网站地址，仅在QQ空间使用
         oks.setSiteUrl("http://sharesdk.cn");
 

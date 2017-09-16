@@ -16,6 +16,8 @@ import cn.shuyuyin.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_after_sale.*
 
 
+
+
 /**
  * Created by wz on 17-9-15.
  * 售后
@@ -59,7 +61,6 @@ class AfterSaleFragment:BaseFragment() {
         val popupWindowAdapter = AftersaleAdapter(mContext, strings)
         listShop.adapter = popupWindowAdapter
 
-//        Log.e("TAG", "wid:" + width)
         val mPopupWindow = PopupWindow(contentView, textView.measuredWidth, ViewGroup.LayoutParams.WRAP_CONTENT, true)
         mPopupWindow.isFocusable = true
         mPopupWindow.setBackgroundDrawable(PaintDrawable(R.color.white))
@@ -72,6 +73,7 @@ class AfterSaleFragment:BaseFragment() {
             -mPopupWindow.contentView.getMeasuredHeight()
             mPopupWindow.showAtLocation(textView, Gravity.RIGHT, 0, -xPos)
         }
+
 
 
         listShop.setOnItemClickListener { adapterView, view, i, l ->
