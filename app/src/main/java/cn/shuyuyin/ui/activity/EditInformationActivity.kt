@@ -42,7 +42,6 @@ class EditInformationActivity:BaseActivity() {
         pickPhotoDialog = PickPhotoDialog(this,this)
         popWindowUtils = PopupWindowUtil(this)
 
-
         pickPhotoDialog!!.setOnPhotoResultListener(object:PickPhotoDialog.OnPhotoResultListener{
             override fun onCameraResult(path: String?) {
 
@@ -75,16 +74,20 @@ class EditInformationActivity:BaseActivity() {
 
         tv_change_head.setOnClickListener {
             CURRENT_CHANGE_STAGE = CHANGE_HEAD_IMAGE
+            pickPhotoDialog!!.window.setWindowAnimations(R.style.MyPopupWindow_anim_style)
             pickPhotoDialog!!.show()
         }
 
 
         ll_change_background.setOnClickListener {
             CURRENT_CHANGE_STAGE = CHANGE_BACKGROUND
+            pickPhotoDialog!!.window.setWindowAnimations(R.style.MyPopupWindow_anim_style)
             pickPhotoDialog!!.show()
 
         }
 
+
+        //更改性别
         ll_gender.setOnClickListener {
 
             popWindowUtils!!.showGenderBottomPopWindow(window)
@@ -101,6 +104,7 @@ class EditInformationActivity:BaseActivity() {
 
         ib_back.setOnClickListener { finish() }
 
+        //修改手机号
         ll_change_phone_num.setOnClickListener {
 
             val intent = Intent()

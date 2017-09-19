@@ -68,9 +68,18 @@ public class PickPhotoDialog extends BaseDialog {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+
+        
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_choice_photo_layout);
+
         btnCamera = findViewById(R.id.btn_takephoto);
         btnPhoto =  findViewById(R.id.btn_photo);
         btnCancel = findViewById(R.id.btn_cancel);

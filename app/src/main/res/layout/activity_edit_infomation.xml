@@ -42,16 +42,20 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="58px"
+            android:layout_marginTop="52px"
             android:layout_gravity="center_horizontal"
             android:id="@+id/civ_head"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="148px"
+            android:layout_height="148px"
             android:src="@mipmap/default_image"
             app:civ_border_width="0dp"
             app:civ_border_color="#FF000000"/>
 
         <TextView
+            android:layout_marginTop="30px"
+            android:textColor="#312f30"
+            android:textSize="30px"
+            android:layout_marginBottom="54px"
             android:id="@+id/tv_change_head"
             android:gravity="center_horizontal"
             android:text="点击更换头像"
@@ -63,6 +67,8 @@
 
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:layout_width="match_parent"
@@ -70,6 +76,8 @@
 
 
         <TextView
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="昵称"
             android:layout_width="wrap_content"
@@ -78,19 +86,25 @@
 
         <TextView
             android:text="点点"
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
+            android:drawableRight="@mipmap/edit_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_gender"
@@ -99,7 +113,8 @@
 
 
         <TextView
-
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="性别"
             android:layout_width="wrap_content"
@@ -107,6 +122,10 @@
 
 
         <TextView
+            android:drawableRight="@mipmap/edit_enter"
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
             android:id="@+id/tv_gender"
             android:text="未设定"
             android:layout_width="wrap_content"
@@ -116,14 +135,16 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_change_background"
@@ -132,6 +153,9 @@
 
 
         <TextView
+            android:drawableRight="@mipmap/edit_enter"
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="更换背景"
             android:layout_width="wrap_content"
@@ -142,14 +166,16 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_change_phone_num"
@@ -158,6 +184,8 @@
 
 
         <TextView
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="手机号码"
             android:layout_width="wrap_content"
@@ -165,6 +193,10 @@
 
 
         <TextView
+            android:drawableRight="@mipmap/edit_enter"
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
             android:text="18563985412"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -173,14 +205,16 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_change_password"
@@ -189,6 +223,8 @@
 
 
         <TextView
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="登录密码"
             android:layout_width="wrap_content"
@@ -196,6 +232,10 @@
 
 
         <TextView
+            android:drawableRight="@mipmap/edit_enter"
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
             android:text="修改"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -204,14 +244,17 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
+
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_change_pay_password"
@@ -220,6 +263,8 @@
 
 
         <TextView
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="支付密码"
             android:layout_width="wrap_content"
@@ -227,6 +272,10 @@
 
 
         <TextView
+            android:drawableRight="@mipmap/edit_enter"
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
             android:text="修改"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -235,14 +284,16 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
     <LinearLayout
+        android:layout_marginTop="32px"
+        android:layout_marginBottom="32px"
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"
         android:id="@+id/ll_bind_account"
@@ -251,6 +302,8 @@
 
 
         <TextView
+            android:textColor="#312f30"
+            android:textSize="30px"
             android:layout_weight="1"
             android:text="第三方帐号"
             android:layout_width="wrap_content"
@@ -258,7 +311,11 @@
 
 
         <TextView
+            android:drawablePadding="16px"
+            android:textColor="#cdcdcd"
+            android:textSize="30px"
             android:text="18563985412"
+            android:drawableRight="@mipmap/edit_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -266,8 +323,8 @@
 
 
     <ImageView
-        android:layout_marginTop="8px"
-        android:layout_marginBottom="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
         android:background="@mipmap/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
