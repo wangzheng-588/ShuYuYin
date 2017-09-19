@@ -11,6 +11,7 @@ import android.widget.TextView
 import cn.shuyuyin.R
 import cn.shuyuyin.presenter.BasePresenter
 import cn.shuyuyin.ui.BaseView
+import cn.shuyuyin.ui.view.progress.CircleProgress
 
 
 abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
@@ -25,6 +26,7 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     private var mViewContent: FrameLayout? = null
     private var mViewEmpty: View? = null
     private var mTextError: TextView? = null
+    private var mProgress: CircleProgress?=null
 
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -35,6 +37,7 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
         mViewProgress = mRootView!!.findViewById(R.id.view_progress)
         mViewContent = mRootView!!.findViewById(R.id.view_content)
         mViewEmpty = mRootView!!.findViewById(R.id.view_empty)
+      //  mProgress = mRootView!!.findViewById(R.id.progress)
 
         mTextError = mRootView!!.findViewById(R.id.text_tip)
 
@@ -50,9 +53,13 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
 
         setRealContentView()
 
-
+        initListener()
         init()
         initData()
+    }
+
+    open fun initListener() {
+
     }
 
     open fun initData() {
@@ -76,6 +83,8 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     fun showProgressView() {
         showView(R.id.view_progress)
 
+      //  mProgress!!.startAnim()
+
     }
 
     private fun showContentView() {
@@ -84,7 +93,6 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     }
 
     private fun showEmptyView() {
-
 
         showView(R.id.view_empty)
     }
@@ -129,10 +137,12 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     override fun showError(msg: String) {
 
         showEmptyView(msg)
+       // mProgress!!.stopAnim()
     }
 
     override fun dismissLoading() {
         showContentView()
+      //  mProgress!!.stopAnim()
     }
 
     abstract fun setLayout(): Int

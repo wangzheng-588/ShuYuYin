@@ -13,8 +13,8 @@ class MainInfoPresenter(model: MainInfoModel = MainInfoModel(), val view: MainIn
 
 
 //        view.showError("加载错误")
-//        view.showResult()
-        view.showLoading()
+        view.showResult()
+//        view.showLoading()
     }
 
 

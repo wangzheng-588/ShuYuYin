@@ -24,4 +24,6 @@
     <dimen name="ucrop_height_crop_aspect_ratio_text">40dp</dimen>
     <dimen name="dialog_padding">25dp</dimen>
     <dimen name="text_16_sp">16sp</dimen>
+
+    <dimen name="default_circle_view_size">200dp</dimen>
 </resources>

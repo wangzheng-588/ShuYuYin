@@ -12,6 +12,20 @@
     </declare-styleable>
 
 
+    <!--加载中-->
+    <declare-styleable name="CircleProgress">
+        <attr name="color1" format="reference|color"/>
+        <attr name="color2" format="reference|color"/>
+        <attr name="color3" format="reference|color"/>
+    </declare-styleable>
+
+
+    <!--下拉刷新-->
+    <declare-styleable name="CirCleRefreshLayout">
+        <attr name="AniBackColor" format="color" />
+        <attr name="AniForeColor" format="color" />
+        <attr name="CircleSmaller" format="integer"/>
+    </declare-styleable>
 
 
 </resources>

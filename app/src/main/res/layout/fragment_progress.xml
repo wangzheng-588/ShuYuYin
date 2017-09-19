@@ -16,6 +16,14 @@
         android:orientation="vertical"
         android:visibility="gone">
 
+
+        <!--<cn.shuyuyin.ui.view.progress.CircleProgress-->
+            <!--android:id="@+id/progress"-->
+            <!--android:layout_marginLeft="100px"-->
+            <!--android:layout_marginRight="100px"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"

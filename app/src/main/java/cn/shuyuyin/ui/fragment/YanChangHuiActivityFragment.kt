@@ -22,7 +22,7 @@ class YanChangHuiActivityFragment:BaseFragment() {
         super.init()
 
         val yanChangHuiActivtyList = ArrayList<YanChangHuiActivityBean>()
-        for ( i in 1..100){
+        for ( i in 1..10){
             yanChangHuiActivtyList.add(YanChangHuiActivityBean(i))
         }
         val adapter = YanChangHuiActivityAdapter(data = yanChangHuiActivtyList )

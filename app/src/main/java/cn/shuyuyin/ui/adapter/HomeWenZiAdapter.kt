@@ -62,7 +62,7 @@ class HomeWenZiAdapter(private val mContext: Context) : RecyclerView.Adapter<Rec
 
 
     override fun getItemCount(): Int {
-        return 2+80
+        return 2+5
     }
 
 
