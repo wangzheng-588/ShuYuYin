@@ -1,4 +1,4 @@
-package cn.shuyuyin.common
+package cn.shuyuyin.common.utils
 
 import android.app.Activity
 import android.content.Context
@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 
 import cn.shuyuyin.R
+import cn.shuyuyin.common.DoubleClickUtil
 
 
 object ActivityUtil {

@@ -1,12 +1,11 @@
 package cn.shuyuyin.ui.activity
 
-import cn.shuyuyin.R
-import cn.shuyuyin.ui.base.BaseActivity
-import android.view.WindowManager
 import android.os.Bundle
 import android.os.Handler
-import cn.shuyuyin.common.ActivityUtil
-import cn.shuyuyin.common.SPUtil
+import android.view.WindowManager
+import cn.shuyuyin.R
+import cn.shuyuyin.common.utils.ActivityUtil
+import cn.shuyuyin.ui.base.BaseActivity
 
 
 /**
@@ -15,7 +14,7 @@ import cn.shuyuyin.common.SPUtil
 class WelcomeActivity:BaseActivity() {
 
     private val IS_FIRST = "IS_FIRST"//是否是第一次使用本软件
-
+  //  val aCache = ACache.get(this)
 
     private val mHandler = Handler()
 
@@ -30,6 +29,7 @@ class WelcomeActivity:BaseActivity() {
     }
 
     override fun init() {
+
 
 
 //        val isFirst = SPUtil.getBoolean(this, IS_FIRST, true)
@@ -48,7 +48,8 @@ class WelcomeActivity:BaseActivity() {
 
 
         mHandler.postDelayed({
-            SPUtil.putBoolean(this@WelcomeActivity, IS_FIRST, false)
+          //  aCache.put(IS_FIRST,false)
+//            SPUtil.putBoolean(this@WelcomeActivity, IS_FIRST, false)
             ActivityUtil.startActivityWithFinish(this@WelcomeActivity, LoginActivity::class.java, null)
         }, 2000)
 

@@ -11,7 +11,9 @@ import android.widget.TextView
 import cn.shuyuyin.R
 import cn.shuyuyin.presenter.BasePresenter
 import cn.shuyuyin.ui.BaseView
-import cn.shuyuyin.ui.view.progress.CircleProgress
+import com.github.ybq.android.spinkit.style.Circle
+import com.github.ybq.android.spinkit.style.DoubleBounce
+import kotlinx.android.synthetic.main.fragment_progress.*
 
 
 abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
@@ -26,7 +28,6 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     private var mViewContent: FrameLayout? = null
     private var mViewEmpty: View? = null
     private var mTextError: TextView? = null
-    private var mProgress: CircleProgress?=null
 
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -80,10 +81,13 @@ abstract class ProgressFragment<T:BasePresenter<*,*>> : Fragment(), BaseView {
     }
 
 
-    fun showProgressView() {
+    private fun showProgressView() {
         showView(R.id.view_progress)
 
       //  mProgress!!.startAnim()
+        val doubleBounce = DoubleBounce()
+        val circle = Circle()
+        spin_kit.setIndeterminateDrawable(circle)
 
     }
 
