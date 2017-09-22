@@ -6,8 +6,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 
 import cn.shuyuyin.R
+import cn.shuyuyin.common.utils.ShareUtils
+import cn.shuyuyin.ui.activity.CommentActivity
 import cn.shuyuyin.ui.activity.MessageHotDetailActivity
 
 
@@ -81,18 +84,22 @@ class MessageHotAdapter(private val mContext: Context) : RecyclerView.Adapter<Re
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
-        if (getItemViewType(position) == VIDEO) {
-            val videoViewHolder = holder as VideoViewHolder
-            //设置数据Banner的数据
-            videoViewHolder.setData()
-        } else if (getItemViewType(position) == IMAGE) {
+        when {
+            getItemViewType(position) == VIDEO -> {
+                val videoViewHolder = holder as VideoViewHolder
+                //设置数据Banner的数据
+                videoViewHolder.setData()
+            }
+            getItemViewType(position) == IMAGE -> {
 
-            val imageViewHolder = holder as ImageViewHolder
-            imageViewHolder.setData()
+                val imageViewHolder = holder as ImageViewHolder
+                imageViewHolder.setData()
 
-        } else if (getItemViewType(position) == TEXT) {
-            val textViewHolder = holder as TextViewHolder
-            textViewHolder.setData()
+            }
+            getItemViewType(position) == TEXT -> {
+                val textViewHolder = holder as TextViewHolder
+                textViewHolder.setData()
+            }
         }
 
     }
@@ -100,6 +107,8 @@ class MessageHotAdapter(private val mContext: Context) : RecyclerView.Adapter<Re
 
     inner class VideoViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        private val iv_comment = itemView.findViewById<ImageView>(R.id.iv_comment)
+        private val  iv_share = itemView.findViewById<ImageView>(R.id.iv_share)
 
 
 
@@ -111,8 +120,17 @@ class MessageHotAdapter(private val mContext: Context) : RecyclerView.Adapter<Re
                 val intent = Intent()
                 intent.setClass(mContext, MessageHotDetailActivity::class.java)
                 mContext.startActivity(intent)
-
             }
+
+
+            iv_comment.setOnClickListener {
+                mContext.startActivity(Intent(mContext,CommentActivity::class.java))
+            }
+
+            iv_share.setOnClickListener {
+                ShareUtils.showShare(mContext)
+            }
+
 
         }
 
@@ -123,19 +141,51 @@ class MessageHotAdapter(private val mContext: Context) : RecyclerView.Adapter<Re
 
     internal inner class ImageViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        private val iv_comment = itemView.findViewById<ImageView>(R.id.iv_comment)
+        private val  iv_share = itemView.findViewById<ImageView>(R.id.iv_share)
 
         fun setData() {
 
+            itemView.setOnClickListener {
+
+                val intent = Intent()
+                intent.setClass(mContext, MessageHotDetailActivity::class.java)
+                mContext.startActivity(intent)
+            }
+
+
+            iv_comment.setOnClickListener {
+                mContext.startActivity(Intent(mContext,CommentActivity::class.java))
+            }
+
+            iv_share.setOnClickListener {
+                ShareUtils.showShare(mContext)
+            }
         }
     }
 
     internal inner class TextViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-
+        private val iv_comment = itemView.findViewById<ImageView>(R.id.iv_comment)
+        private val  iv_share = itemView.findViewById<ImageView>(R.id.iv_share)
 
 
         fun setData() {
 
+            itemView.setOnClickListener {
+
+                val intent = Intent()
+                intent.setClass(mContext, MessageHotDetailActivity::class.java)
+                mContext.startActivity(intent)
+            }
+
+
+            iv_comment.setOnClickListener {
+                mContext.startActivity(Intent(mContext,CommentActivity::class.java))
+            }
+
+            iv_share.setOnClickListener {
+                ShareUtils.showShare(mContext)
+            }
 
         }
 

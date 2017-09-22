@@ -39,6 +39,10 @@ class MessageHotDetailActivity:BaseActivity() {
             ShareUtils.showShare(this)
         }
 
+        ll_comment.setOnClickListener {
+            startActivity(Intent(this@MessageHotDetailActivity,CommentActivity::class.java))
+        }
+
     }
 
     override fun init() {

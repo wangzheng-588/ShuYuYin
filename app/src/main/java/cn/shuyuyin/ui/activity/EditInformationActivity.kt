@@ -2,9 +2,7 @@ package cn.shuyuyin.ui.activity
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
-import android.os.Build
 import cn.shuyuyin.R
 import cn.shuyuyin.common.utils.PopupWindowUtil
 import cn.shuyuyin.ui.base.BaseActivity
@@ -51,12 +49,6 @@ class EditInformationActivity:BaseActivity() {
                 if (bitmap!=null){
 
                     when (CURRENT_CHANGE_STAGE){
-                        CHANGE_BACKGROUND->{
-                            val bd = BitmapDrawable(resources, bitmap)
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                ll_background.background =bd
-                            }
-                        }
                         CHANGE_HEAD_IMAGE->{
                             civ_head.setImageBitmap(bitmap)
                         }
@@ -68,11 +60,27 @@ class EditInformationActivity:BaseActivity() {
 
             override fun onPhotoResult(selectedImgs: Uri?) {
 
+                when (CURRENT_CHANGE_STAGE){
+                    CHANGE_BACKGROUND->{
+//                            val bd = BitmapDrawable(resources, bitmap)
+//                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                                ll_background.background =bd
+//                            }
+
+                        val intent = Intent()
+                        intent.action = "cn.shuyuyin.action.CHANGE_BACKGROUND"
+                        intent.putExtra("background",selectedImgs.toString())
+                        sendBroadcast(intent)
+
+
+                    }
+                }
+
             }
 
         })
 
-        tv_change_head.setOnClickListener {
+        civ_head.setOnClickListener {
             CURRENT_CHANGE_STAGE = CHANGE_HEAD_IMAGE
             pickPhotoDialog!!.window.setWindowAnimations(R.style.MyPopupWindow_anim_style)
             pickPhotoDialog!!.show()

@@ -59,6 +59,7 @@ public class WaitGoodsOrderListview extends LinearLayout {
 		tv_similar_products =  view.findViewById(R.id.tv_similar_products);
 		tv_pay =  view.findViewById(R.id.tv_pay);
 		tv_pay.setText("确认");
+		tv_similar_products.setText("查看物流");
 		tv_pay.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

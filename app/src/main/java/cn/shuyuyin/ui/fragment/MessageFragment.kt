@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.fragment_yanchanghui.*
 
 /**
  * Created by wz on 17-9-7.
+ * 论坛
  */
 
 class MessageFragment: BaseFragment() {

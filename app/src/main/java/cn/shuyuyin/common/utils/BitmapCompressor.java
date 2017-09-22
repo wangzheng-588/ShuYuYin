@@ -1,6 +1,6 @@
 package cn.shuyuyin.common.utils;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -148,14 +148,16 @@ public class BitmapCompressor {
 
 
 
-    public static Bitmap getBitmapFormUri(Activity ac, Uri uri) throws FileNotFoundException, IOException {
-        InputStream input = ac.getContentResolver().openInputStream(uri);
+    public static Bitmap getBitmapFormUri(Context context, Uri uri) throws FileNotFoundException, IOException {
+        InputStream input = context.getContentResolver().openInputStream(uri);
         BitmapFactory.Options onlyBoundsOptions = new BitmapFactory.Options();
         onlyBoundsOptions.inJustDecodeBounds = true;
         onlyBoundsOptions.inDither = true;//optional
         onlyBoundsOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;//optional
         BitmapFactory.decodeStream(input, null, onlyBoundsOptions);
-        input.close();
+        if (input != null) {
+            input.close();
+        }
         int originalWidth = onlyBoundsOptions.outWidth;
         int originalHeight = onlyBoundsOptions.outHeight;
         if ((originalWidth == -1) || (originalHeight == -1))
@@ -177,9 +179,11 @@ public class BitmapCompressor {
         bitmapOptions.inSampleSize = be;//设置缩放比例
         bitmapOptions.inDither = true;//optional
         bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;//optional
-        input = ac.getContentResolver().openInputStream(uri);
+        input = context.getContentResolver().openInputStream(uri);
         Bitmap bitmap = BitmapFactory.decodeStream(input, null, bitmapOptions);
-        input.close();
+        if (input != null) {
+            input.close();
+        }
 
         return compressBitmap(bitmap,300);//再进行质量压缩
     }

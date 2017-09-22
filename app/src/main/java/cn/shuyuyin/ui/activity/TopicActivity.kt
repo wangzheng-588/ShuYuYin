@@ -52,6 +52,11 @@ class TopicActivity: BaseActivity() {
 
         }
 
+
+        ib_play.setOnClickListener {
+            startActivity(Intent(this,HomeCenterActivity::class.java))
+        }
+
     }
 
     override fun init() {

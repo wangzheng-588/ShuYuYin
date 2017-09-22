@@ -1,7 +1,9 @@
 package cn.shuyuyin.ui.fragment
 
 import android.content.Intent
+import android.content.IntentFilter
 import cn.shuyuyin.R
+import cn.shuyuyin.common.broadcast.ChangeBackgroundBroadcast
 import cn.shuyuyin.ui.activity.*
 import cn.shuyuyin.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_me.*
@@ -20,11 +22,13 @@ class MeFragment: BaseFragment() {
     override fun initListener() {
         super.initListener()
 
+        //编辑资料
         tv_edit_information.setOnClickListener {
 
             val intent = Intent()
             intent.setClass(mContext, EditInformationActivity::class.java)
             startActivity(intent)
+//            ActivityUtil.startActivityForResult(activity,EditInformationActivity::class.java,)
 
         }
 
@@ -88,6 +92,18 @@ class MeFragment: BaseFragment() {
             intent.putExtra("type",4)
             startActivity(intent)
         }
+    }
+
+
+    override fun init() {
+        super.init()
+
+        //实例化IntentFilter对象
+        val  filter =  IntentFilter()
+        filter.addAction("cn.shuyuyin.action.CHANGE_BACKGROUND")
+        val broadcast = ChangeBackgroundBroadcast(iv_background)
+        activity.registerReceiver(broadcast,filter)
+
     }
 
     override fun initData() {

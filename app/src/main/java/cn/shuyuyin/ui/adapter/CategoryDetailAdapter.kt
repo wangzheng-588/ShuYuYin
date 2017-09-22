@@ -104,11 +104,7 @@ class CategoryDetailAdapter(private val mContext: Context) : RecyclerView.Adapte
 
 
     inner class BannerViewHolder(private val mContext: Context, itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val banner: Banner
-
-        init {
-            banner = itemView.findViewById<Banner>(R.id.banner)
-        }
+        private val banner = itemView.findViewById<Banner>(R.id.banner)
 
         fun setData() {
 
@@ -158,7 +154,7 @@ class CategoryDetailAdapter(private val mContext: Context) : RecyclerView.Adapte
         fun setData(position: Int) {
 
             if (currentType== RECOMMEND){
-                val params = llRecommend.getLayoutParams() as LinearLayout.LayoutParams
+                val params = llRecommend.layoutParams as LinearLayout.LayoutParams
                 if (position%2!=0){
                     params.rightMargin = 16
                 } else{
