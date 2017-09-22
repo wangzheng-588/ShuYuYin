@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:src="@mipmap/default_image"
+            app:civ_border_width="0dp"
+            app:civ_border_color="#FF000000"/>
+
+        <LinearLayout
+            android:layout_marginLeft="32px"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#312f30"
+                    android:textSize="30px"
+                    android:text="消息通知"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:layout_marginLeft="36px"
+                    android:textColor="#8f8d8e"
+                    android:textSize="28px"
+                    android:text="+10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#8f8d8e"
+                android:textSize="28px"
+                android:layout_marginTop="30px"
+                android:text="回复了一条消息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:background="@mipmap/login_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

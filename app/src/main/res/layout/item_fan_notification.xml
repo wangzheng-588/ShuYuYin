@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_marginTop="50px"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="130px"
+        android:layout_height="wrap_content">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:src="@mipmap/default_image"
+            app:civ_border_width="0dp"
+            app:civ_border_color="#FF000000"/>
+
+        <ImageView
+            android:layout_marginTop="10px"
+            android:layout_marginLeft="15px"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/default_image"
+            android:layout_width="30px"
+            android:layout_height="30px" />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:text="走钢索的人"
+        android:textSize="28px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="96px">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:background="@mipmap/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="36px"
+            android:layout_centerInParent="true"
+            android:text="我要发布"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_publish_title"
+        android:hint="输入标题"
+        android:textSize="28px"
+        android:padding="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="36px"
+        android:background="@drawable/gray_rec_arc_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70px" />
+
+
+    <EditText android:textSize="28px"
+        android:id="@+id/et_publish_content"
+        android:hint="输入发表内容"
+        android:padding="8px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="36px"
+        android:background="@drawable/gray_rec_arc_bg"
+        android:minLines="8"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginRight="36px"
+        android:layout_marginLeft="36px"
+        android:layout_marginTop="36px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:text="添加图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginRight="36px"
+                android:background="@drawable/button_gray_rec_arc_bg"
+                android:text="发表"
+                android:textColor="#fdfafa"
+                android:textSize="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="60px" />
+
+            <Button
+                android:background="@drawable/gray_rec_arc_bg"
+                android:text="取消"
+                android:textColor="#515151"
+                android:textSize="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="60px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

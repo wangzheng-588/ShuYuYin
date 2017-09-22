@@ -124,6 +124,13 @@
         <activity android:name=".ui.activity.MallSearchActivity" />
         <activity android:name=".ui.activity.MyOrderActivity" />
         <activity android:name=".ui.activity.SearchActivityActivity" />
+        <activity android:name=".ui.activity.SystemMessageActivity" />
+        <activity android:name=".ui.activity.DashangNotificationActivity" />
+        <activity android:name=".ui.activity.ReceivedPraiseActivity" />
+        <activity android:name=".ui.activity.ReceivedActivity" />
+        <activity android:name=".ui.activity.FanNotificationActivity" />
+        <activity android:name=".ui.activity.ReplyMeActivity" />
+        <activity android:name=".ui.activity.PublishActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>

@@ -39,17 +39,6 @@ class MessageSelectedAdapter(layoutResId:Int = R.layout.item_message_selected, d
         val params = rl_item_parent.layoutParams as LinearLayout.LayoutParams
 
 
-
-//
-//        if (position>2){
-//
-//            if (position%2!=0){
-//                params.rightMargin = 16
-//            } else{
-//                params.rightMargin = 0
-//            }
-//        }
-
         when{
             position <2 ->{
                 if (position%2==0){

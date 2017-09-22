@@ -32,6 +32,271 @@
 
     </RelativeLayout>
 
+
+
+
+    <LinearLayout
+        android:layout_marginTop="36px"
+        android:id="@+id/ll_reply_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="回复我的"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ll_at_me"
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="@我的"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/_ll_fan_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="粉丝通知"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_received_praise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="收到的赞"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_dashang_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="打赏通知"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_system_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/my_song_sheet"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="系统消息"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+
+            android:textColor="#2c2d2d"
+            android:textSize="28px"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/enter"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:text="+2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <ImageView
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:background="@mipmap/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
     <android.support.v7.widget.RecyclerView
         android:layout_marginLeft="36px"
         android:layout_marginRight="36px"

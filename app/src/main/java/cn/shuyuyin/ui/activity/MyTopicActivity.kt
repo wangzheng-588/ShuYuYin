@@ -1,5 +1,6 @@
 package cn.shuyuyin.ui.activity
 
+import android.content.Intent
 import android.support.v4.app.Fragment
 import cn.shuyuyin.R
 import cn.shuyuyin.ui.adapter.FragmentAdapter
@@ -32,6 +33,11 @@ class MyTopicActivity:BaseActivity() {
         super.initListener()
 
         ib_back.setOnClickListener { finish() }
+
+        ib_publish.setOnClickListener {
+
+            startActivity(Intent(this,PublishActivity::class.java))
+        }
     }
 
     override fun init() {

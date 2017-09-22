@@ -1,8 +1,10 @@
 package cn.shuyuyin.ui.fragment
 
+import android.content.Intent
 import android.support.v7.widget.GridLayoutManager
 import cn.shuyuyin.R
 import cn.shuyuyin.bean.MessageSelectedBean
+import cn.shuyuyin.ui.activity.MessageHotDetailActivity
 import cn.shuyuyin.ui.adapter.MessageSelectedAdapter
 import cn.shuyuyin.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_message_selected.*
@@ -27,6 +29,12 @@ class MessageSelectedFragment:BaseFragment() {
         adapter.setSpanCount(gridLayoutManager)
         recycler_view.adapter = adapter
         recycler_view.layoutManager = gridLayoutManager
+
+        adapter.setOnItemClickListener { adapter, view, position ->
+            val intent = Intent()
+            intent.setClass(mContext, MessageHotDetailActivity::class.java)
+            mContext.startActivity(intent)
+        }
 
 
     }
