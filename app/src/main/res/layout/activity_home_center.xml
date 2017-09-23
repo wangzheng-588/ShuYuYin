@@ -24,6 +24,10 @@
 
 
         <android.support.design.widget.TabLayout
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_toRightOf="@id/ib_back"
+            android:layout_toLeftOf="@id/ib_play"
             android:layout_centerInParent="true"
             android:id="@+id/tab_layout"
             android:layout_width="wrap_content"
@@ -33,6 +37,15 @@
             app:tabIndicatorHeight="4dp"
             app:tabSelectedTextColor="@color/tablayout_title_Blue"
             app:tabTextColor="@color/tab_text_color"/>
+
+        <ImageButton
+            android:id="@+id/ib_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="36px"
+            android:background="@mipmap/play" />
 
 
 
@@ -49,7 +62,7 @@
         android:layout_height="0dp"
         />
 
-    <include layout="@layout/layout_play_bottom"/>
+
 
 
 </LinearLayout>

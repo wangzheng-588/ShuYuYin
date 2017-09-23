@@ -131,18 +131,31 @@
         <activity android:name=".ui.activity.FanNotificationActivity" />
         <activity android:name=".ui.activity.ReplyMeActivity" />
         <activity android:name=".ui.activity.PublishActivity" />
+        <activity android:name=".ui.activity.AudioPlayActivity" />
+        <activity android:name=".ui.activity.LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.package.name.lockscreen"
+            android:noHistory="true"
+            android:theme="@style/LockScreenBase"/>
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
         <meta-data android:name="Mob-AppSecret" android:value="9c144a93952c59caf3a24f2c1c26aa3e"/>
 
 
-
-
-
-
-
-
+        <service android:name=".ui.services.MediaPlayerService" >
+            <intent-filter>
+                <action android:name="com.shuyuyin.MUSIC_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name=".common.broadcast.ScreenBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
     </application>
 
 

@@ -32,6 +32,7 @@
 
 
         <ImageView
+            android:id="@+id/iv_play"
             android:layout_marginTop="8px"
             android:layout_marginBottom="8px"
             android:layout_marginLeft="80px"
