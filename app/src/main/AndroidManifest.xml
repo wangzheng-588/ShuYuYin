@@ -141,6 +141,7 @@
             android:noHistory="true"
             android:theme="@style/LockScreenBase"/>
         <activity android:name=".ui.activity.MusicListenerDetailActivity" />
+        <activity android:name=".ui.activity.ArtistsDetailActivity" />
 
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data android:name="Mob-AppKey" android:value="20dae2ccae844"/>
