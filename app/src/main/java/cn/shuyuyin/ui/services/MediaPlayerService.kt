@@ -86,21 +86,20 @@ class MediaPlayerService : Service() {
                 val sendIntent = Intent(ACTION_UPDATE_INFO)
                 isPlaying = true
                 sendIntent.putExtra("isPlaying", true)
-                sendIntent.putExtra("currentposition", currentposition)
-
                 sendIntent.putExtra("TitleName", titleName)
+
                 // 发送广播，将被Activity组件中的BroadcastReceiver接收到
                 sendBroadcast(sendIntent)
-                PlayMusic(0)
+                playMusic(0)
 
             }
             Config.MSG_PAUSE_RUSUME -> //暂停
 
-                PauseNResumeMusic()
+                pauseNResumeMusic()
             Config.MSG_PRIVIOUS -> //上一首
-                PreviousMusic()
+                previousMusic()
             Config.MSG_NEXT -> //下一首
-                NextMusic()
+                nextMusic()
             Config.MSG_CHANGE_PROGRESS -> {    //点击进度条 更新音乐服务
                 currentTime = intent.getIntExtra("progress", -1)
                 mHandler.removeMessages(1)
@@ -112,18 +111,21 @@ class MediaPlayerService : Service() {
                 duration = mediaPlayer!!.duration
                 sendIntent.putExtra("duration", duration)
                 sendBroadcast(sendIntent)
-                PlayMusic(currentTime)
+                playMusic(currentTime)
 
             }
-            Config.MSG_PLAY_DETAIL -> {
-                val sendIntent = Intent(ACTION_UPDATE_INFO)
-                sendIntent.putExtra("isPlaying", isPlaying)
-                sendIntent.putExtra("currentposition", currentposition)
-                duration = mediaPlayer!!.duration
-                sendIntent.putExtra("duration", duration)
-                sendBroadcast(sendIntent)
-                mHandler.sendEmptyMessage(1)
+            Config.REMOVE_HANDLER_MESSAGE -> {
+                mHandler.removeMessages(1)
             }
+//            Config.MSG_PLAY_DETAIL -> {
+//                val sendIntent = Intent(ACTION_UPDATE_INFO)
+//                sendIntent.putExtra("isPlaying", isPlaying)
+//                sendIntent.putExtra("currentposition", currentposition)
+//                duration = mediaPlayer!!.duration
+//                sendIntent.putExtra("duration", duration)
+//                sendBroadcast(sendIntent)
+//                mHandler.sendEmptyMessage(1)
+//            }
             else->{
                 val sendIntent = Intent(ACTION_UPDATE_INFO)
                 sendIntent.putExtra("isPlaying", isPlaying)
@@ -133,28 +135,12 @@ class MediaPlayerService : Service() {
         return super.onStartCommand(intent, flag, startId)
     }
 
-    private fun updateUI() {
-        val sendIntent = Intent(ACTION_UPDATE_INFO)
-        // 发送广播，将被Activity组件中的BroadcastReceiver接收到
-        sendIntent.putExtra("currentposition", currentposition)
-        duration = mediaPlayer!!.duration
-        sendIntent.putExtra("duration", duration)
-        if (isStart&&mediaPlayer != null && mediaPlayer!!.isPlaying) {
-
-            sendIntent.putExtra("isPlaying", true)
-        } else {
-
-            sendIntent.putExtra("isPlaying", false)
-        }
-        sendBroadcast(sendIntent)
-    }
-
 
     /**
      * 播放音乐
      *
      */
-    private fun PlayMusic(current: Int) {
+    private fun playMusic(current: Int) {
         try {
             mediaPlayer!!.reset()// 把各项参数恢复到初始状态
             mediaPlayer!!.setDataSource(path)
@@ -172,7 +158,7 @@ class MediaPlayerService : Service() {
     /**
      * 暂停与开始音乐
      */
-    private fun PauseNResumeMusic() {
+    private fun pauseNResumeMusic() {
 
 
         val sendIntent = Intent(ACTION_UPDATE_INFO)
@@ -195,20 +181,20 @@ class MediaPlayerService : Service() {
     /**
      * 上一首
      */
-    private fun PreviousMusic() {
+    private fun previousMusic() {
         val sendIntent = Intent(ACTION_UPDATE_INFO)
         isPlaying = true
         sendIntent.putExtra("isPlaying", true)
         sendIntent.putExtra("currentposition", currentposition)
         // 发送广播，将被Activity组件中的BroadcastReceiver接收到
         sendBroadcast(sendIntent)
-        PlayMusic(0)
+        playMusic(0)
     }
 
     /**
      * 下一首
      */
-    private fun NextMusic() {
+    private fun nextMusic() {
         val sendIntent = Intent(ACTION_UPDATE_INFO)
         isPlaying = true
         sendIntent.putExtra("isPlaying", true)
@@ -217,7 +203,7 @@ class MediaPlayerService : Service() {
         sendIntent.putExtra("TitleName", titleName)
         // 发送广播，将被Activity组件中的BroadcastReceiver接收到
         sendBroadcast(sendIntent)
-        PlayMusic(0)
+        playMusic(0)
     }
 
     override fun onDestroy() {
@@ -246,8 +232,7 @@ class MediaPlayerService : Service() {
             //更新时间
             mHandler.sendEmptyMessage(1)
             //更新 歌曲时间
-            val intent = Intent()
-            intent.action = ACTION_MUSIC_DURATION
+            val intent = Intent(ACTION_MUSIC_DURATION)
             duration = mediaPlayer!!.duration
             intent.putExtra("duration", duration)    //通过Intent来传递歌曲的总长度
             sendBroadcast(intent)
@@ -262,10 +247,7 @@ class MediaPlayerService : Service() {
     }
 
     inner class PlayBind : Binder() {
-
-
         fun getMediaPlayerService(): MediaPlayerService  =  this@MediaPlayerService
-
 
     }
 

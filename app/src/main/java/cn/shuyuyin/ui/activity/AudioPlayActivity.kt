@@ -8,10 +8,12 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Environment
 import android.os.Handler
+import android.widget.SeekBar
 import cn.shuyuyin.R
 import cn.shuyuyin.common.listener.MyAnimatorUpdateListener
 import cn.shuyuyin.common.task.DownloadTask
 import cn.shuyuyin.common.utils.Config
+import cn.shuyuyin.common.utils.TimeUtils
 import cn.shuyuyin.ui.base.BaseActivity
 import cn.shuyuyin.ui.services.MediaPlayerService
 import kotlinx.android.synthetic.main.activity_audio_player.*
@@ -27,6 +29,7 @@ class AudioPlayActivity:BaseActivity() {
 
 
     private val INVALID = -1
+    private var debug = -3
     private var path: String = "http://other.web.ra01.sycdn.kuwo.cn/resource/n3/128/17/55/3616442357.mp3" // url地址
     private var listposition = 0
     private var isPlaying = false // 正在播放
@@ -42,6 +45,7 @@ class AudioPlayActivity:BaseActivity() {
     override fun setLayoutView(): Int {
         return R.layout.activity_audio_player
     }
+
 
 
 
@@ -62,6 +66,49 @@ class AudioPlayActivity:BaseActivity() {
     override fun initListener() {
         super.initListener()
         iv_play.setOnClickListener { playMusic() }
+
+        seekbar_audio.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                if (fromUser) {
+                    debug = progress
+                    removeHandler()
+
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                audioTrackChange(debug) // 用户控制进度的改变
+            }
+
+        })
+    }
+
+
+    fun removeHandler(){
+        val intent = Intent(this,MediaPlayerService::class.java)
+        intent.action = Config.MUSIC_SERVICE
+
+        intent.putExtra("MSG", Config.REMOVE_HANDLER_MESSAGE)
+
+        startService(intent)
+    }
+
+
+    /**
+     * 播放进度改变
+     * @param progress
+     */
+    fun audioTrackChange(progress: Int) {
+        val intent = Intent(this,MediaPlayerService::class.java)
+        intent.action = Config.MUSIC_SERVICE
+        intent.putExtra("url", path)
+        intent.putExtra("listPosition", listposition)
+        intent.putExtra("MSG", Config.MSG_CHANGE_PROGRESS)
+        intent.putExtra("progress", progress)
+        startService(intent)
     }
 
 
@@ -133,7 +180,11 @@ class AudioPlayActivity:BaseActivity() {
     private fun registerReceiver() {
 
         val filter = IntentFilter()
-        filter.addAction(Config.ACTION_UPDATE_INFO)
+
+
+        filter.addAction(MediaPlayerService.ACTION_UPDATE_INFO)
+        filter.addAction(MediaPlayerService.ACTION_CURRENT_TIME)
+        filter.addAction(MediaPlayerService.ACTION_MUSIC_DURATION)
         registerReceiver(musicUIBroadcastReceiver, filter)
     }
 
@@ -145,39 +196,42 @@ class AudioPlayActivity:BaseActivity() {
 
         override fun onReceive(context: Context, intent: Intent) {
             val action = intent.action
-            if (action == Config.ACTION_UPDATE_INFO) {
-                //更新UI操作
-                listposition = intent.getIntExtra("currentposition",INVALID)
-                isPlaying = intent.getBooleanExtra("isPlaying", false)
+            when (action ) {
+                 MediaPlayerService.ACTION_UPDATE_INFO  ->{
+                    //更新UI操作
+                    isPlaying = intent.getBooleanExtra("isPlaying", false)
 
-                if (isPlaying) {
-
-                    //如果已经暂停，是继续播放
-                    if(updateListener!!.isPause)updateListener!!.play()
-                    //否则就是从头开始播放
-                    else animator!!.start()
-
-                    //如果已经暂停，是继续播放
-                    if(updateListener!!.isPause)updateListener!!.play()
-                    //否则就是从头开始播放
-                    else animator!!.start()
-//                         AnimationUtils.RotatesAnim(this@AudioPlayActivity,profile_image,R.anim.audio_player_cover_anim)
-                } else {
-                    updateListener!!.isPause = true
-
-//                    AnimationUtils.stopAnim(profile_image)
-                }
-
-                if (listposition >= 0) {
-//                    musicTitle.setText(musicInfo.getTitle()) // 显示歌曲标题
-//                    musicSinger.setText(musicInfo.getArtist()) //显示歌手名字
                     if (isPlaying) {
-//                        playBtn.setImageResource(R.drawable.pause)
+
+                        iv_play.setImageResource(R.mipmap.audio_pause)
+
+                        //暂时屏蔽旋转动画
+//                        //如果已经暂停，是继续播放
+//                        if(updateListener!!.isPause)updateListener!!.play()
+//                        //否则就是从头开始播放
+//                        else animator!!.start()
+
+//                  // AnimationUtils.RotatesAnim(this@AudioPlayActivity,profile_image,R.anim.audio_player_cover_anim)
                     } else {
-//                        playBtn.setImageResource(R.drawable.play)
+//                        updateListener!!.isPause = true
+                        iv_play.setImageResource(R.mipmap.audio_play)
                     }
 
                 }
+
+                MediaPlayerService.ACTION_CURRENT_TIME -> {
+                    val currentTime = intent.extras.get("currentTime") as Int
+                    seekbar_audio.progress = currentTime
+                    tv_current_time.text = TimeUtils.formatTime(currentTime.toLong())
+                }
+
+                MediaPlayerService.ACTION_MUSIC_DURATION -> {
+                    val duration = intent.extras.get("duration") as Int
+                    seekbar_audio.max = duration
+                    tv_duration.text = TimeUtils.formatTime(duration.toLong())
+
+                }
+
             }
         }
     }

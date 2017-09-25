@@ -18,9 +18,10 @@ object Config {
     val MSG_NEXT = 5        //下一首
     val MSG_CHANGE_PROGRESS = 6//进度改变
     val MSG_PLAY_DETAIL = 7    //用于更新detail界面当前进度UI
+    val REMOVE_HANDLER_MESSAGE = 8    //用于更新detail界面当前进度UI
 
     //音乐更新action
-    val ACTION_UPDATE_INFO = "android.intent.action.ACTION_UPDATE_INFO"
+
     val MUSIC_SERVICE: String = "com.shuyuyin.MUSIC_SERVICE"
 
 
