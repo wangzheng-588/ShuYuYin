@@ -6,8 +6,12 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.drawable.BitmapDrawable
 import android.os.Environment
 import android.os.Handler
+import android.support.v7.widget.RecyclerView
+import android.view.*
+import android.widget.PopupWindow
 import android.widget.SeekBar
 import cn.shuyuyin.R
 import cn.shuyuyin.common.listener.MyAnimatorUpdateListener
@@ -84,6 +88,11 @@ class AudioPlayActivity:BaseActivity() {
             }
 
         })
+
+
+
+        //弹出歌单
+        iv_song_sheet.setOnClickListener { showSongSheetPopWindow(window) }
     }
 
 
@@ -245,6 +254,42 @@ class AudioPlayActivity:BaseActivity() {
         animator!!.removeAllUpdateListeners()
         animator!!.removeAllListeners()
 
+    }
+
+
+
+
+    //底部弹出的popWindow
+    fun showSongSheetPopWindow(window: Window): PopupWindow {
+        val view = View.inflate(this, R.layout.popupwindow_song_sheet, null)
+        //        View popupWindowView = View.inflate(mContext, R.layout.case_sharing_pop, null);
+        val popupWindow = PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, 600, true)
+        //在PopupWindow里面就加上下面代码，让键盘弹出时，不会挡住pop窗口。
+        popupWindow.inputMethodMode = PopupWindow.INPUT_METHOD_NEEDED
+        popupWindow.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+        popupWindow.isFocusable = true
+        popupWindow.setBackgroundDrawable(BitmapDrawable())
+        //添加pop窗口关闭事件
+        popupWindow.setOnDismissListener { backgroundAlpha(1f, window) }
+        popupWindow.animationStyle = R.style.MyPopupWindow_anim_style
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_song_sheet)
+
+
+
+
+
+        popupWindow.showAtLocation(View.inflate(this, R.layout.activity_audio_player, null), Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 0)
+        backgroundAlpha(0.5f, window)
+        return popupWindow
+    }
+
+
+    private fun backgroundAlpha(bgAlpha: Float, window: Window) {
+        val lp = window.attributes
+        lp.alpha = bgAlpha //0.0-1.0
+        window.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+        window.attributes = lp
     }
 
 

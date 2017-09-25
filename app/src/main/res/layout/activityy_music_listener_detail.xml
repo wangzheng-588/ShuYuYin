@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="476px">
+
+
+            <ImageView
+                android:background="@mipmap/default_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_marginTop="36px"
+                android:layout_marginLeft="36px"
+                android:background="@mipmap/music_listener_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageButton
+                android:layout_marginRight="36px"
+                android:layout_alignParentRight="true"
+                android:id="@+id/ib_music"
+                android:layout_marginTop="36px"
+                android:background="@mipmap/music_listener_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageButton
+                android:layout_marginRight="36px"
+                android:layout_centerInParent="true"
+                android:id="@+id/ib_pause"
+                android:layout_marginTop="36px"
+                android:background="@mipmap/music_listener_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="36px"
+            android:layout_marginTop="38px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:text="汽车穿过一段"
+                android:textSize="36px"
+                android:textColor="#393d30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:text="汽车穿过一段"
+                android:layout_marginTop="40px"
+                android:textSize="30px"
+                android:textColor="#393d30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginRight="36px"
+            android:layout_marginLeft="36px"
+            android:textColor="#3d3930"
+            android:textSize="30px"
+            android:text="12首"
+            android:layout_marginTop="78px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_marginRight="36px"
+            android:layout_marginLeft="36px"
+            android:layout_marginTop="24px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="60px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <TextView
+            android:layout_marginRight="36px"
+            android:layout_marginLeft="36px"
+            android:textColor="#3d3930"
+            android:textSize="36px"
+            android:text="推荐曲风"
+            android:layout_marginTop="46px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="46px"
+            android:id="@+id/recycler_view_music_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_marginTop="42px"
+            android:background="@mipmap/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="36px"
+            android:layout_marginBottom="32px"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@mipmap/music_listener_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <ImageView
+                android:layout_marginLeft="120px"
+                android:background="@mipmap/music_listener_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_marginLeft="120px"
+                android:background="@mipmap/music_listener_dashang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_marginLeft="120px"
+                android:background="@mipmap/music_listener_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
